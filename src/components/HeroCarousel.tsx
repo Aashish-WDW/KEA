@@ -104,8 +104,8 @@ function Slide1() {
         <div className="relative w-32 h-32 flex items-center justify-center mx-auto">
           <div className="absolute inset-0 rounded-full border border-[#C9A84C]/15 animate-[spin_30s_linear_infinite]" />
           <div className="absolute inset-3 rounded-full border border-[#C9A84C]/30" />
-          <div className="absolute inset-6 rounded-full border border-[#C9A84C]/50 flex items-center justify-center">
-            <span className="font-heading text-lg font-medium text-[#C9A84C] tracking-[0.35em]">KEA</span>
+          <div className="absolute inset-6 rounded-full border border-[#C9A84C]/50 flex items-center justify-center overflow-hidden">
+            <img src="/logo.png" alt="KEA Logo" className="w-10 h-10 object-contain" />
           </div>
           {/* Orbiting dot */}
           <div className="absolute inset-0 rounded-full animate-[spin_8s_linear_infinite]">
@@ -268,20 +268,6 @@ function Slide4() {
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
         <span className="font-heading text-[20vw] font-bold text-white/[0.02] leading-none">2004</span>
       </div>
-
-      <BlurFade delay={0.05}>
-        {/* Decorative seal */}
-        <div className="mb-8 relative w-24 h-24 mx-auto">
-          <div className="absolute inset-0 rounded-full border border-[#C9A84C]/20" />
-          <div className="absolute inset-2.5 rounded-full border border-[#C9A84C]/35" />
-          <div className="absolute inset-5 rounded-full border border-[#C9A84C]/55 flex items-center justify-center">
-            <span className="font-heading text-xs text-[#C9A84C] tracking-[0.2em]">Est.</span>
-          </div>
-          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#C9A84C] px-3 py-0.5">
-            <span className="text-[#0B1C2D] text-[9px] font-bold tracking-[0.2em]">2004</span>
-          </div>
-        </div>
-      </BlurFade>
 
       <BlurFade delay={0.12}>
         <div className="flex items-center gap-4 justify-center mb-6">

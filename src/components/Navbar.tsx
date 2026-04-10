@@ -99,10 +99,8 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="w-10 h-10 rounded-full border-2 border-[#C9A84C]/70 flex items-center justify-center">
-            <span className="font-heading text-sm font-semibold tracking-widest text-[#C9A84C]">
-              KEA
-            </span>
+          <div className="w-10 h-10 rounded-full border-2 border-[#C9A84C]/70 flex items-center justify-center overflow-hidden">
+            <img src="/logo.png" alt="KEA Logo" className="w-7 h-7 object-contain" />
           </div>
           <div className="hidden sm:block">
             <div

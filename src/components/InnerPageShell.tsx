@@ -108,8 +108,8 @@ function ComingSoon() {
           <div className="mb-10 relative">
             {/* Outer ring */}
             <div className="w-24 h-24 rounded-full border border-[#C9A84C]/30 flex items-center justify-center">
-              <div className="w-16 h-16 rounded-full border border-[#C9A84C]/50 flex items-center justify-center">
-                <span className="font-heading text-sm font-medium text-[#C9A84C]/70 tracking-widest">KEA</span>
+              <div className="w-16 h-16 rounded-full border border-[#C9A84C]/50 flex items-center justify-center overflow-hidden">
+                <img src="/logo.png" alt="KEA Logo" className="w-10 h-10 object-contain" />
               </div>
             </div>
             {/* Corner marks */}

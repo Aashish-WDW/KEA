@@ -34,8 +34,8 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div>
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-10 h-10 rounded-full border border-[#C9A84C]/45 flex items-center justify-center shrink-0">
-                <span className="font-heading text-[13px] font-medium text-[#C9A84C] tracking-widest">KEA</span>
+              <div className="w-10 h-10 rounded-full border border-[#C9A84C]/45 flex items-center justify-center shrink-0 overflow-hidden">
+                <img src="/logo.png" alt="KEA Logo" className="w-6 h-6 object-contain" />
               </div>
               <div>
                 <div className="font-heading text-[13px] font-medium text-white leading-none">Karnataka Equestrian</div>

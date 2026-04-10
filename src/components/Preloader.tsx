@@ -46,8 +46,8 @@ export function Preloader() {
               <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#C9A84C]" />
             </motion.div>
             {/* Inner ring — static */}
-            <div className="w-20 h-20 rounded-full border border-[#C9A84C]/50 flex items-center justify-center">
-              <span className="font-heading text-base font-medium text-[#C9A84C] tracking-[0.35em]">KEA</span>
+            <div className="w-20 h-20 rounded-full border border-[#C9A84C]/50 flex items-center justify-center overflow-hidden">
+              <img src="/logo.png" alt="KEA Logo" className="w-12 h-12 object-contain" />
             </div>
           </motion.div>
 
