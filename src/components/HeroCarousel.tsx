@@ -101,11 +101,11 @@ function Slide1() {
     <div className="flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
       <BlurFade delay={0.05} className="mb-10">
         {/* Triple-ring monogram */}
-        <div className="relative w-32 h-32 flex items-center justify-center mx-auto">
+        <div className="relative w-40 h-40 flex items-center justify-center mx-auto">
           <div className="absolute inset-0 rounded-full border border-[#C9A84C]/15 animate-[spin_30s_linear_infinite]" />
           <div className="absolute inset-3 rounded-full border border-[#C9A84C]/30" />
           <div className="absolute inset-6 rounded-full border border-[#C9A84C]/50 flex items-center justify-center overflow-hidden">
-            <img src="/logo.png" alt="KEA Logo" className="w-10 h-10 object-contain" />
+            <img src="/logo.png" alt="KEA Logo" className="w-12 h-12 object-contain" />
           </div>
           {/* Orbiting dot */}
           <div className="absolute inset-0 rounded-full animate-[spin_8s_linear_infinite]">

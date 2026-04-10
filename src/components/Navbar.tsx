@@ -99,19 +99,19 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="w-10 h-10 rounded-full border-2 border-[#C9A84C]/70 flex items-center justify-center overflow-hidden">
-            <img src="/logo.png" alt="KEA Logo" className="w-7 h-7 object-contain" />
+          <div className="w-14 h-14 rounded-full border-2 border-[#C9A84C]/70 flex items-center justify-center overflow-hidden">
+            <img src="/logo.png" alt="KEA Logo" className="w-11 h-11 object-contain" />
           </div>
           <div className="hidden sm:block">
             <div
               className={cn(
-                "font-heading text-[13px] font-semibold tracking-wide leading-none transition-colors duration-300",
+                "font-heading text-[14px] font-semibold tracking-wide leading-none transition-colors duration-300",
                 dark ? "text-white" : "text-[#0B1C2D]"
               )}
             >
               Karnataka Equestrian
             </div>
-            <div className="text-[9px] tracking-[0.18em] uppercase text-[#C9A84C]/80 mt-0.5">
+            <div className="text-[10px] tracking-[0.18em] uppercase text-[#C9A84C]/80 mt-1">
               Association
             </div>
           </div>
