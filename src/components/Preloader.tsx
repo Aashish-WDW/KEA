@@ -32,22 +32,22 @@ export function Preloader() {
           >
             {/* Outer ring — rotates slowly */}
             <motion.div
-              className="absolute w-36 h-36 rounded-full border border-[#C9A84C]/20"
+              className="absolute w-72 h-72 rounded-full border border-[#C9A84C]/20"
               animate={{ rotate: 360 }}
               transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
             />
             {/* Mid ring — counter-rotates */}
             <motion.div
-              className="absolute w-28 h-28 rounded-full border border-[#C9A84C]/35"
+              className="absolute w-56 h-56 rounded-full border border-[#C9A84C]/35"
               animate={{ rotate: -360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
             >
               {/* Orbiting dot */}
-              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-[#C9A84C]" />
+              <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-[#C9A84C]" />
             </motion.div>
             {/* Inner ring — static */}
-            <div className="w-20 h-20 rounded-full border border-[#C9A84C]/50 flex items-center justify-center overflow-hidden">
-              <img src="/logo.png" alt="KEA Logo" className="w-12 h-12 object-contain" />
+            <div className="w-40 h-40 rounded-full border border-[#C9A84C]/50 flex items-center justify-center overflow-hidden">
+              <img src="/logo.png" alt="KEA Logo" className="w-24 h-24 object-contain" />
             </div>
           </motion.div>
 
