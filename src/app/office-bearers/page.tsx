@@ -11,16 +11,6 @@ const keyBearers = [
   { initials: "JB", name: "Ms. Judith Bidappa", role: "Joint Secretary", bio: "", href: "#" },
 ];
 
-const execCommittee = [
-  { initials: "VH", name: "Mr. Vikram Hegde", role: "Treasurer" },
-  { initials: "SM", name: "Gen. S.K. Malhotra (Retd.)", role: "Immediate Past President" },
-  { initials: "RN", name: "Dr. Rekha Nair", role: "Member — Dressage" },
-  { initials: "AS", name: "Sqn. Ldr. A. Singh (Retd.)", role: "Member — Tent Pegging" },
-  { initials: "KM", name: "Mr. Kiran Madappa", role: "Member — Show Jumping" },
-  { initials: "SV", name: "Ms. Sunita Venkatesh", role: "Member — Endurance" },
-  { initials: "GR", name: "Mr. Ganesh Rao", role: "Member — Eventing" },
-  { initials: "DP", name: "Dr. Deepa Pillai", role: "Member — Welfare & Veterinary" },
-];
 
 export default function OfficeBearersPage() {
   return (
@@ -74,26 +64,12 @@ export default function OfficeBearersPage() {
               <div className="h-px w-8 bg-[#C9A84C]" />
               <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Executive Committee 2024–2029</span>
             </div>
-            <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-14">Committee <span className="italic">Members</span></h2>
+            <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-6">Committee <span className="italic">Members</span></h2>
           </BlurFade>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {execCommittee.map((member, i) => (
-              <BlurFade key={member.name} delay={0.15 + i * 0.06} inView>
-                <MagicCard className="flex items-center gap-4 p-5 border border-[#EDEAE3] hover:border-[#C9A84C]/30 transition-colors group">
-                  <div className="relative z-10 flex items-center gap-4 w-full">
-                    <div className="w-14 h-14 rounded-full bg-[#F7F4EF] border border-[#EDEAE3] group-hover:border-[#C9A84C]/30 transition-colors flex items-center justify-center shrink-0">
-                      <span className="font-heading text-base font-medium text-[#0B1C2D] tracking-wider">{member.initials}</span>
-                    </div>
-                    <div>
-                      <div className="text-[10px] tracking-[0.12em] uppercase text-[#C9A84C] mb-1">{member.role}</div>
-                      <div className="font-medium text-[#0B1C2D] text-sm leading-snug">{member.name}</div>
-                    </div>
-                  </div>
-                </MagicCard>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={0.2} inView>
+            <p className="text-[#6B7280] text-base italic">To Be Confirmed</p>
+          </BlurFade>
         </div>
       </section>
 

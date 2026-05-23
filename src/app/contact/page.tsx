@@ -12,11 +12,6 @@ export const metadata: Metadata = {
   description: "Reach the Karnataka Equestrian Association. Contact the KEA Secretariat for membership, event registration, EFI services, and general enquiries.",
 };
 
-const team = [
-  { initials: "NM", name: "Mr. Navaneet Murugesh", role: "Secretary General", phone: "+91 98800 00000", email: "secretariat@kea.org.in" },
-  { initials: "JB", name: "Ms. Judith Bidappa", role: "Joint Secretary", phone: "+91 98800 00001", email: "secretariat@kea.org.in" },
-  { initials: "VH", name: "Mr. Vikram Hegde", role: "Treasurer", phone: "+91 98800 00002", email: "secretariat@kea.org.in" },
-];
 
 export default function ContactPage() {
   return (
@@ -103,29 +98,9 @@ export default function ContactPage() {
             <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-12">Contact Our <span className="italic">Team</span></h2>
           </BlurFade>
 
-          <div className="grid sm:grid-cols-3 gap-6">
-            {team.map((person, i) => (
-              <BlurFade key={person.name} delay={0.15 + i * 0.08} inView>
-                <MagicCard className="border border-[#EDEAE3] hover:border-[#C9A84C]/35 transition-colors group h-full">
-                  <div className="p-8 relative z-10">
-                    <div className="flex items-center gap-4 mb-5">
-                    <div className="w-14 h-14 rounded-full bg-[#F7F4EF] border-2 border-[#EDEAE3] group-hover:border-[#C9A84C]/40 transition-colors flex items-center justify-center shrink-0">
-                      <span className="font-heading text-base font-medium text-[#0B1C2D]">{person.initials}</span>
-                    </div>
-                    <div>
-                      <div className="text-[10px] tracking-[0.12em] uppercase text-[#C9A84C] mb-1">{person.role}</div>
-                      <div className="font-medium text-[#0B1C2D] text-sm">{person.name}</div>
-                    </div>
-                  </div>
-                  <div className="space-y-2 text-[12px] text-[#6B7280]">
-                    <div>{person.phone}</div>
-                    <div className="break-all">{person.email}</div>
-                  </div>
-                  </div>
-                </MagicCard>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={0.2} inView>
+            <p className="text-[#6B7280] text-base italic">To Be Confirmed</p>
+          </BlurFade>
         </div>
       </section>
     </InnerPageShell>

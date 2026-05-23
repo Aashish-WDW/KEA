@@ -11,16 +11,6 @@ const officeBearers = [
   { initials: "JB", name: "Ms. Judith Bidappa", role: "Joint Secretary", term: "2024–2029", bio: "" },
 ];
 
-const execMembers = [
-  { initials: "SM", name: "Gen. S.K. Malhotra (Retd.)", role: "Immediate Past President", expertise: "Governance & Strategy", bio: "Served as KEA President from 2022–2024. Gen. Malhotra's tenure saw the expansion of the district chapter network and KEA's re-affiliation with EFI after a procedural gap." },
-  { initials: "RN", name: "Dr. Rekha Nair", role: "Member — Dressage", expertise: "Dressage & Training", bio: "An EFI-certified dressage judge and long-time trainer. Dr. Nair heads the KEA Dressage Technical Sub-committee and represents Karnataka riders at EFI dressage forums." },
-  { initials: "AS", name: "Sqn. Ldr. A. Singh (Retd.)", role: "Member — Tent Pegging", expertise: "Tent Pegging & Military Disciplines", bio: "Sqn. Ldr. Singh is a decorated tent pegging competitor and former Armed Forces champion. He coordinates with ITPF for Karnataka's tent pegging calendar." },
-  { initials: "KM", name: "Mr. Kiran Madappa", role: "Member — Show Jumping", expertise: "Show Jumping", bio: "A national-level show jumping competitor and course designer, Mr. Madappa leads KEA's show jumping technical panel and organises the annual District League." },
-  { initials: "SV", name: "Ms. Sunita Venkatesh", role: "Member — Endurance", expertise: "Endurance Riding", bio: "Karnataka's most experienced endurance rider, Ms. Venkatesh has completed multiple 100km+ EFI-sanctioned events and chairs the Endurance Technical Sub-committee." },
-  { initials: "GR", name: "Mr. Ganesh Rao", role: "Member — Eventing", expertise: "Eventing & Cross-Country", bio: "Mr. Rao is a trained eventing rider and course designer who works closely with EFI's eventing committee to bring international-standard cross-country courses to Karnataka." },
-  { initials: "DP", name: "Dr. Deepa Pillai", role: "Member — Welfare & Veterinary", expertise: "Equine Health & Welfare", bio: "A practising equine veterinarian, Dr. Pillai ensures all KEA events meet FEI welfare standards. She chairs the Equine Welfare Sub-committee and advises on horse health policy." },
-  { initials: "MK", name: "Mr. Mahesh Kumar", role: "Member — Infrastructure", expertise: "Venue & Facilities", bio: "Mr. Kumar oversees the development and maintenance of equestrian facilities across Karnataka, working with government bodies and private clubs to improve riding infrastructure." },
-];
 
 export default function ExecutiveCommitteePage() {
   return (
@@ -73,25 +63,9 @@ export default function ExecutiveCommitteePage() {
             </div>
             <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-14">Committee <span className="italic">Members</span></h2>
           </BlurFade>
-          <div className="grid sm:grid-cols-2 gap-6">
-            {execMembers.map((m, i) => (
-              <BlurFade key={m.name} delay={0.15 + i * 0.06} inView>
-                <MagicCard className="border border-[#EDEAE3] hover:border-[#C9A84C]/35 hover:shadow-[0_4px_20px_rgba(201,168,76,0.06)] transition-all duration-300 group">
-                  <div className="p-7 flex gap-5 relative z-10">
-                    <div className="w-14 h-14 rounded-full border-2 border-[#EDEAE3] group-hover:border-[#C9A84C]/45 transition-colors bg-[#F7F4EF] flex items-center justify-center shrink-0">
-                      <span className="font-heading text-base font-medium text-[#0B1C2D] tracking-wider">{m.initials}</span>
-                    </div>
-                    <div>
-                      <div className="text-[9px] tracking-[0.12em] uppercase text-[#C9A84C] mb-1">{m.expertise}</div>
-                      <div className="font-heading text-base font-medium text-[#0B1C2D] mb-1">{m.name}</div>
-                      <div className="text-[10px] text-[#9CA3AF] mb-3">{m.role}</div>
-                      <p className="text-[#6B7280] text-[12px] leading-relaxed">{m.bio}</p>
-                    </div>
-                  </div>
-                </MagicCard>
-              </BlurFade>
-            ))}
-          </div>
+          <BlurFade delay={0.2} inView>
+            <p className="text-[#6B7280] text-base italic">To Be Confirmed</p>
+          </BlurFade>
         </div>
       </section>
 
