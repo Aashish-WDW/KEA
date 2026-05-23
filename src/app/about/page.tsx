@@ -25,7 +25,7 @@ const pillars = [
   { num: "01", title: "Governance", desc: "Providing a transparent, structured framework for equestrian sport across all of Karnataka's districts and affiliated clubs." },
   { num: "02", title: "Development", desc: "Investing in grassroots talent, coaching programmes, and infrastructure to grow the sport from school level to national competition." },
   { num: "03", title: "Competition", desc: "Organising state-level championships, qualifying events, and clinics across all five disciplines throughout the year." },
-  { num: "04", title: "Excellence", desc: "Guiding Karnataka riders towards national podiums and international representation under the banner of EFI and IOA." },
+  { num: "04", title: "Excellence", desc: "Guiding Karnataka riders towards national podiums and international representation under the banner of EFI and KOA." },
 ];
 
 export default function AboutPage() {

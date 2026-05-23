@@ -10,7 +10,7 @@ const timeline = [
   { year: "2500 BC", event: "Vedic Period", desc: "Chariot racing becomes one of the most popular games in ancient India, as documented in Vedic texts and inscriptions." },
   { year: "500 BC", event: "Ramayana Era", desc: "Horses become central to royal life — hunting on horseback is established as a royal sport, cementing the bond between Indian nobility and the horse." },
   { year: "1800s", event: "Colonial Cavalry", desc: "British cavalry traditions introduce structured equestrian sport to India. Polo, tent pegging, and show jumping gain prominence in the subcontinent." },
-  { year: "1967", event: "EFI Founded", desc: "The Equestrian Federation of India is constituted as the apex national body, affiliated with FEI, IOA, AEF, and MYAS." },
+  { year: "1967", event: "EFI Founded", desc: "The Equestrian Federation of India is constituted as the apex national body, affiliated with FEI, KOA, and MYAS." },
   { year: "1990s", event: "KEA Established", desc: "The Karnataka Equestrian Association is formed to govern and develop equestrian sport across Karnataka, affiliating with EFI." },
   { year: "2000s", event: "Growth Era", desc: "Increased participation in dressage and show jumping. Karnataka riders begin representing the state at national EFI championships." },
   { year: "2010s", event: "Structured Competition", desc: "KEA introduces a structured state calendar, district chapters, and qualification pathways for national events." },

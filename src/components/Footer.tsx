@@ -42,9 +42,9 @@ export default function Footer() {
                 <div className="text-[9px] tracking-[0.16em] uppercase text-[#C9A84C]/65 mt-0.5">Association</div>
               </div>
             </div>
-            <p className="text-white/30 text-[12px] leading-relaxed mb-6">The apex body governing equestrian sports in Karnataka. Affiliated with EFI, IOA, and MYAS.</p>
+            <p className="text-white/30 text-[12px] leading-relaxed mb-6">The apex body governing equestrian sports in Karnataka. Affiliated with EFI, KOA, and MYAS.</p>
             <div className="flex gap-2 flex-wrap">
-              {["EFI", "IOA", "MYAS", "AEF"].map((tag) => (
+              {["EFI", "KOA", "MYAS"].map((tag) => (
                 <span key={tag} className="text-[8px] tracking-[0.12em] uppercase border border-[#C9A84C]/15 text-[#C9A84C]/40 px-2 py-1">{tag}</span>
               ))}
             </div>

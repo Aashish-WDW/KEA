@@ -310,7 +310,11 @@ function News() {
 function Events() {
   const events = [
     { type: "Competition", title: "Karnataka State Equestrian Competition", date: "24th May 2026", venue: "Embassy International Riding School", fee: "₹1,000 per entry", desc: "", status: "Open" },
-    { type: "Upcoming", title: "All Other Events", date: "TBC", venue: "TBC", fee: "TBC", desc: "", status: "TBC" },
+    { type: "Championship", title: "Karnataka State Dressage Championship", date: "TBC", venue: "TBC", fee: "TBC", desc: "", status: "TBC" },
+    { type: "Championship", title: "Karnataka State Show Jumping Championship", date: "TBC", venue: "TBC", fee: "TBC", desc: "", status: "TBC" },
+    { type: "Championship", title: "Karnataka State Eventing Championship", date: "TBC", venue: "TBC", fee: "TBC", desc: "", status: "TBC" },
+    { type: "Championship", title: "Karnataka State Tent Pegging Championship", date: "TBC", venue: "TBC", fee: "TBC", desc: "", status: "TBC" },
+    { type: "Championship", title: "Karnataka State Endurance Riding Championship", date: "TBC", venue: "TBC", fee: "TBC", desc: "", status: "TBC" },
   ];
 
   return (

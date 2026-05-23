@@ -20,7 +20,7 @@ const articles = [
     title: "Objects and Purpose",
     clauses: [
       "To govern, promote, and develop equestrian sport in all its disciplines across the State of Karnataka.",
-      "To affiliate with and comply with the regulations of the Equestrian Federation of India (EFI), the Indian Olympic Association (IOA), and such other national and international bodies as the Association may determine.",
+      "To affiliate with and comply with the regulations of the Equestrian Federation of India (EFI), the Karnataka Olympic Association (KOA), and such other national and international bodies as the Association may determine.",
       "To organise and conduct equestrian competitions, clinics, training programmes, and all other equestrian activities within Karnataka.",
       "To ensure the welfare of horses and riders in all Association-sanctioned activities, in line with FEI and EFI welfare standards.",
       "To promote equestrian sport at the grassroots level and create pathways from state-level participation to national and international representation.",
@@ -123,7 +123,7 @@ export default function BylawsPage() {
                 These Bylaws constitute the governing rules of the Karnataka Equestrian Association and are binding on all members, office bearers, committees, and affiliated entities.
               </p>
               <p className="text-[#6B7280] text-sm leading-relaxed">
-                The Association operates under the framework of the Equestrian Federation of India (EFI) and the Indian Olympic Association (IOA). In the event of any conflict between these Bylaws and the regulations of EFI or IOA, the latter shall prevail.
+                The Association operates under the framework of the Equestrian Federation of India (EFI) and the Karnataka Olympic Association (KOA). In the event of any conflict between these Bylaws and the regulations of EFI or KOA, the latter shall prevail.
               </p>
             </div>
           </BlurFade>
