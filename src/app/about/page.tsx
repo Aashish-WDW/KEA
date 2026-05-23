@@ -17,10 +17,8 @@ export const metadata: Metadata = {
 
 const affiliations = [
   { abbr: "EFI", name: "Equestrian Federation of India", desc: "National apex body for equestrian sports; our primary governing federation." },
-  { abbr: "IOA", name: "Indian Olympic Association", desc: "Recognises equestrian sport as part of India's Olympic movement." },
-  { abbr: "MYAS/SAI", name: "Ministry of Youth Affairs & Sports", desc: "Central government recognition supporting athlete development and funding." },
-  { abbr: "AEF", name: "Asian Equestrian Federation", desc: "Continental body governing equestrian sport across Asia." },
-  { abbr: "ITPF", name: "International Tent Pegging Federation", desc: "Global governing body for the tent pegging discipline." },
+  { abbr: "KOA", name: "Karnataka Olympic Association", desc: "Recognises equestrian sport as part of India's Olympic movement." },
+  { abbr: "MYAS", name: "Ministry of Youth Affairs & Sports", desc: "State government recognition supporting athlete development and funding." },
 ];
 
 const pillars = [
@@ -59,7 +57,7 @@ export default function AboutPage() {
             </FadeText>
             <FadeText delay={0.4} inView>
               <p className="text-[#4A5568] text-sm leading-relaxed mb-4">
-                Affiliated with the Equestrian Federation of India (EFI), KEA operates under the framework of the Indian Olympic Association and is recognised by the Ministry of Youth Affairs & Sports, Government of India.
+                Affiliated with the Equestrian Federation of India (EFI), KEA operates under the framework of the Indian Olympic Association and is recognised by the Ministry of Youth Affairs & Sports, Government of Karnataka.
               </p>
             </FadeText>
             <FadeText delay={0.5} inView>
@@ -73,10 +71,10 @@ export default function AboutPage() {
             <div className="relative group">
               <div className="absolute -inset-4 border border-[#C9A84C]/10 bg-[#C9A84C]/5 -rotate-1" />
               <div className="relative aspect-video lg:aspect-square overflow-hidden border border-[#EDEAE3]">
-                <img 
-                  src="/images/membership_community.png" 
-                  alt="KEA Community" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                <img
+                  src="/images/membership_community.jpg"
+                  alt="KEA Community"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C2D]/80 via-transparent to-transparent p-8 flex flex-col justify-end">
                   <div className="font-heading text-lg text-white mb-2 italic">"Unity in Horsemanship"</div>
@@ -86,7 +84,7 @@ export default function AboutPage() {
               {/* Stats dots */}
               <div className="absolute -bottom-6 -right-6 bg-white border border-[#EDEAE3] p-6 shadow-xl hidden lg:block">
                 <div className="text-2xl font-heading text-[#0B1C2D] mb-0.5">
-                  <NumberTicker value={500} />+
+                  <NumberTicker value={100} />+
                 </div>
                 <div className="text-[8px] tracking-[0.1em] uppercase text-[#C9A84C]">Active Members</div>
               </div>
@@ -130,10 +128,10 @@ export default function AboutPage() {
       <section className="relative bg-[#0B1C2D] py-20 lg:py-28 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 opacity-10 grayscale brightness-50">
-          <img src="/images/hero_heritage.png" className="w-full h-full object-cover" alt="" />
+          <img src="/images/hero_heritage.jpg" className="w-full h-full object-cover" alt="" />
         </div>
         <AnimatedGridPattern className="opacity-40" numSquares={20} maxOpacity={0.08} />
-        
+
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 relative z-10">
           <BlurFade delay={0.1} inView>
             <MagicCard className="border border-[#C9A84C]/20 h-full backdrop-blur-sm bg-white/[0.02]" gradientColor="rgba(201,168,76,0.08)">

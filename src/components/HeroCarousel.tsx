@@ -19,7 +19,7 @@ const slides = [
   {
     id: "championship",
     bg: "bg-[#081628]",
-    image: "/images/hero_championship.png",
+    image: "/gallery/DSC01485.JPG",
     glow1: "bg-[radial-gradient(ellipse_65%_50%_at_25%_20%,_#163050,_transparent)]",
     glow2: "bg-[radial-gradient(ellipse_50%_40%_at_80%_85%,_#0d2240,_transparent)]",
     pattern: "dot-grid",
@@ -28,7 +28,7 @@ const slides = [
   {
     id: "disciplines",
     bg: "bg-[#060e1a]",
-    image: "/images/hero_disciplines.png",
+    image: "/images/hero_disciplines.jpg",
     glow1: "bg-[radial-gradient(ellipse_60%_50%_at_50%_30%,_#112240,_transparent)]",
     glow2: "bg-[radial-gradient(ellipse_40%_35%_at_15%_70%,_#0a1e35,_transparent)]",
     pattern: "cross-hatch",
@@ -37,7 +37,7 @@ const slides = [
   {
     id: "heritage",
     bg: "bg-[#0a1520]",
-    image: "/images/hero_heritage.png",
+    image: "/images/hero_heritage.jpg",
     glow1: "bg-[radial-gradient(ellipse_60%_45%_at_85%_15%,_#1a2e42,_transparent)]",
     glow2: "bg-[radial-gradient(ellipse_50%_40%_at_10%_80%,_#0e2035,_transparent)]",
     pattern: "horizontal-lines",
@@ -96,7 +96,7 @@ function PatternOverlay({ type }: { type: string }) {
 
 /* ── Slide 1 — Brand Identity ── */
 function Slide1() {
-  const affiliations = ["EFI Affiliated", "IOA Recognized", "MYAS / SAI", "AEF Member", "ITPF"];
+  const affiliations = ["EFI Affiliated", "KOA Recognized", "MYAS / GOK"];
   return (
     <div className="flex flex-col items-center text-center px-6 max-w-5xl mx-auto">
       <BlurFade delay={0.05} className="mb-10">
@@ -140,9 +140,11 @@ function Slide1() {
 
       <BlurFade delay={0.35}>
         <div className="flex flex-col sm:flex-row gap-4">
-          <ShimmerButton shimmerColor="#C9A84C" background="#C9A84C" className="text-[#0B1C2D] text-[10px] tracking-[0.22em] uppercase font-semibold">
-            Become a Member
-          </ShimmerButton>
+          <a href="mailto:secretariat@kea.org.in">
+            <ShimmerButton shimmerColor="#C9A84C" background="#C9A84C" className="text-[#0B1C2D] text-[10px] tracking-[0.22em] uppercase font-semibold">
+              Become a Member
+            </ShimmerButton>
+          </a>
           <Link href="/events" className="px-10 py-4 border border-white/20 text-white/80 text-[10px] tracking-[0.22em] uppercase hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors">
             Upcoming Events
           </Link>
@@ -164,7 +166,7 @@ function Slide2() {
       <BlurFade delay={0.05}>
         <div className="inline-flex items-center gap-3 mb-6">
           <div className="h-px w-8 bg-[#C9A84C]" />
-          <span className="text-[10px] tracking-[0.28em] uppercase text-[#C9A84C] font-medium">March 2026 · Bangalore</span>
+          <span className="text-[10px] tracking-[0.28em] uppercase text-[#C9A84C] font-medium">24 May 2026 · Embassy International Riding School</span>
           <div className="h-px w-8 bg-[#C9A84C]" />
         </div>
       </BlurFade>
@@ -177,17 +179,28 @@ function Slide2() {
 
       <BlurFade delay={0.2}>
         {/* Event details strip */}
-        <div className="flex flex-wrap justify-center gap-8 mb-10">
-          {[
-            { label: "Date", val: "15–17 March 2026" },
-            { label: "Venue", val: "Bangalore Turf Club" },
-            { label: "Disciplines", val: "All Five" },
-          ].map((d) => (
-            <div key={d.label} className="text-center">
-              <div className="text-[9px] tracking-[0.2em] uppercase text-[#C9A84C]/70 mb-1">{d.label}</div>
-              <div className="text-sm text-white/80 font-medium">{d.val}</div>
+        <div className="w-full max-w-xl border border-[#C9A84C]/15 divide-y divide-[#C9A84C]/10 mb-10">
+          {/* Karnataka State Equestrian Competition */}
+          <div className="px-6 py-3">
+            <div className="text-[9px] tracking-[0.2em] uppercase text-[#C9A84C]/70 mb-2">Karnataka State Equestrian Competition</div>
+            <div className="flex flex-wrap gap-6">
+              {[
+                { label: "Date", val: "24th May 2026" },
+                { label: "Venue", val: "Embassy International Riding School" },
+                { label: "Entry", val: "₹1,000 per entry" },
+              ].map((d) => (
+                <div key={d.label} className="text-center">
+                  <div className="text-[8px] tracking-[0.18em] uppercase text-[#C9A84C]/50 mb-0.5">{d.label}</div>
+                  <div className="text-xs text-white/80 font-medium">{d.val}</div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+          {/* All other events */}
+          <div className="px-6 py-3">
+            <div className="text-[9px] tracking-[0.2em] uppercase text-[#C9A84C]/70 mb-1">All Other Events</div>
+            <div className="text-[11px] text-white/35 italic tracking-wide">To be announced</div>
+          </div>
         </div>
       </BlurFade>
 

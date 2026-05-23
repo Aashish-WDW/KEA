@@ -176,7 +176,7 @@ export default function BylawsPage() {
             <div className="mt-10 bg-[#0B1C2D] p-6">
               <p className="text-white/45 text-[12px] leading-relaxed">
                 These Bylaws were adopted by the General Body of the Karnataka Equestrian Association. For certified copies or queries regarding these Bylaws, contact the Secretariat at{" "}
-                <span className="text-[#C9A84C]/70">secretary@karnatakaequestrian.in</span>
+                <span className="text-[#C9A84C]/70">secretariat@kea.org.in</span>
               </p>
             </div>
           </FadeText>

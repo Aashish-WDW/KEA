@@ -15,82 +15,30 @@ export const metadata: Metadata = {
 
 const events = [
   {
-    type: "Championship",
+    type: "Competition",
     discipline: "All Disciplines",
     disciplineColor: "bg-[#0B1C2D] text-[#C9A84C]",
-    title: "Karnataka State Equestrian Championship 2026",
-    date: "15–17 March 2026",
-    venue: "Bangalore Turf Club, Bangalore",
-    fee: "₹2,500 per entry",
-    contact: "+91 80 0000 0000",
-    desc: "The premier annual championship bringing together Karnataka's finest equestrians across all five disciplines. State title holders qualify for EFI national events. Open to all current KEA members.",
+    title: "Karnataka State Equestrian Competition",
+    date: "24th May 2026",
+    venue: "Embassy International Riding School",
+    fee: "₹1,000 per entry",
+    contact: "",
+    desc: "",
     status: "Registration Open",
     statusColor: "bg-green-50 text-green-700",
   },
   {
-    type: "Regional League",
-    discipline: "Dressage · Show Jumping",
-    disciplineColor: "bg-blue-50 text-blue-700",
-    title: "Regional Equestrian League — Karnataka Round",
-    date: "5–7 April 2026",
-    venue: "Palace Grounds, Mysuru",
-    fee: "₹1,800 per entry",
-    contact: "+91 80 0000 0001",
-    desc: "The EFI Regional Equestrian League (REL) Karnataka qualifier, featuring Dressage and Show Jumping. Results contribute to national REL standings. Mandatory EFI rider and horse registration required.",
-    status: "Registration Open",
-    statusColor: "bg-green-50 text-green-700",
-  },
-  {
-    type: "Training Camp",
-    discipline: "Dressage",
-    disciplineColor: "bg-blue-50 text-blue-700",
-    title: "Dressage Clinic & Intensive Training Camp",
-    date: "20–22 February 2026",
-    venue: "Royal Mysore Equestrian Academy, Bangalore",
-    fee: "₹3,500 per participant",
-    contact: "+91 80 0000 0002",
-    desc: "A three-day intensive training camp led by EFI-certified dressage instructors. Covering Preliminary through Medium level tests. Limited to 20 horse-and-rider combinations.",
-    status: "Upcoming",
-    statusColor: "bg-amber-50 text-amber-700",
-  },
-  {
-    type: "District Qualifier",
-    discipline: "Show Jumping",
-    disciplineColor: "bg-amber-50 text-amber-700",
-    title: "Show Jumping League — District Qualifier",
-    date: "10–11 May 2026",
-    venue: "Cubbon Park Equestrian Grounds, Bangalore",
-    fee: "₹1,200 per entry",
-    contact: "+91 80 0000 0003",
-    desc: "District-level show jumping qualifier for the KEA State Championship. Heights: 90cm, 1.10m, and 1.20m. Top three from each height category qualify for the state finals.",
-    status: "Upcoming",
-    statusColor: "bg-amber-50 text-amber-700",
-  },
-  {
-    type: "Championship",
-    discipline: "Tent Pegging",
-    disciplineColor: "bg-red-50 text-red-700",
-    title: "All-Karnataka Tent Pegging Championship 2026",
-    date: "7–8 June 2026",
-    venue: "Bangalore Cantonment Grounds, Bangalore",
-    fee: "₹1,000 per rider",
-    contact: "+91 80 0000 0004",
-    desc: "The annual All-Karnataka Tent Pegging Championship featuring individual lance, team lance, and sword events. Open to military and civilian riders. EFI registration required for national ranking points.",
-    status: "Upcoming",
-    statusColor: "bg-amber-50 text-amber-700",
-  },
-  {
-    type: "Endurance Ride",
-    discipline: "Endurance",
-    disciplineColor: "bg-emerald-50 text-emerald-700",
-    title: "Karnataka Endurance Ride 2026",
-    date: "19–20 July 2026",
-    venue: "Nandi Hills Equestrian Trail, Chikkaballapur",
-    fee: "₹2,000 per horse-rider",
-    contact: "+91 80 0000 0005",
-    desc: "Karnataka's premier endurance riding event. Distances: 40km (Introductory), 80km (National Star). Mandatory pre-ride veterinary inspection. Horse welfare checks at every control point.",
-    status: "Upcoming",
-    statusColor: "bg-amber-50 text-amber-700",
+    type: "Upcoming",
+    discipline: "TBC",
+    disciplineColor: "bg-gray-100 text-gray-500",
+    title: "All Other Events",
+    date: "TBC",
+    venue: "TBC",
+    fee: "TBC",
+    contact: "",
+    desc: "",
+    status: "TBC",
+    statusColor: "bg-gray-100 text-gray-500",
   },
 ];
 
@@ -105,9 +53,9 @@ export default function EventsPage() {
       <section className="bg-white py-10 border-b border-[#EDEAE3]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#6B7280] text-sm">All events are subject to EFI technical guidelines. Current KEA membership required for entry.</p>
-          <Link href="/membership" className="shrink-0 text-[10px] tracking-[0.16em] uppercase text-[#C9A84C] hover:gap-2 flex items-center gap-1.5 transition-all">
+          <a href="mailto:secretariat@kea.org.in" className="shrink-0 text-[10px] tracking-[0.16em] uppercase text-[#C9A84C] hover:gap-2 flex items-center gap-1.5 transition-all">
             Become a Member →
-          </Link>
+          </a>
         </div>
       </section>
 
@@ -155,7 +103,7 @@ export default function EventsPage() {
                           { icon: "◇", label: ev.venue },
                           { icon: "◇", label: ev.fee },
                           { icon: "◇", label: ev.contact },
-                        ].map((detail, j) => (
+                        ].filter((d) => d.label).map((detail, j) => (
                           <div key={j} className="flex items-center gap-2 text-[13px] text-[#4A5568]">
                             <span className="text-[#C9A84C] text-[8px]">{detail.icon}</span>
                             {detail.label}

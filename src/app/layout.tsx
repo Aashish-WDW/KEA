@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | KEA — Karnataka Equestrian Association",
   },
   description:
-    "The official governing body for equestrian sports in Karnataka. Affiliated with the Equestrian Federation of India (EFI), IOA, and MYAS/SAI.",
+    "The official governing body for equestrian sports in Karnataka. Affiliated with the Equestrian Federation of India (EFI), IOA, and MYAS.",
   keywords: ["equestrian", "Karnataka", "horse riding", "dressage", "show jumping", "eventing", "tent pegging", "endurance", "KEA", "EFI"],
   openGraph: {
     title: "Karnataka Equestrian Association",

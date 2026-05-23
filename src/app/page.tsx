@@ -54,10 +54,10 @@ function About() {
   ];
 
   const stats = [
-    { number: 30, suffix: "+", label: "Years of Excellence" },
-    { number: 500, suffix: "+", label: "Registered Members" },
+    { number: 10, suffix: "+", label: "Years of Excellence" },
+    { number: 100, suffix: "+", label: "Registered Members" },
     { number: 5, suffix: "", label: "Equestrian Disciplines" },
-    { number: 20, suffix: "+", label: "Annual Events" },
+    { number: 20, suffix: "+", label: "Events" },
   ];
 
   return (
@@ -88,7 +88,7 @@ function About() {
               Karnataka has a rich heritage of equestrian sport, rooted in a tradition that spans centuries. Evidence of horse games and equestrian activities resonates through history — from ancient cavalry to royal sport — forming the foundation of our Association.
             </p>
             <p className="text-[#4A5568] leading-relaxed text-sm mb-8">
-              The Karnataka Equestrian Association is the apex body governing equestrian sports across Karnataka, affiliated with the Equestrian Federation of India (EFI), the Indian Olympic Association (IOA), and MYAS/SAI.
+              The Karnataka Equestrian Association is the apex body governing equestrian sports across Karnataka, affiliated with the Equestrian Federation of India (EFI), the Karnataka Olympic Association (KOA), and MYAS.
             </p>
             <Link href="/about" className="inline-flex items-center gap-2 text-[10px] tracking-[0.18em] uppercase text-[#C9A84C] border border-[#C9A84C]/40 px-7 py-3 hover:bg-[#C9A84C] hover:text-[#0B1C2D] transition-all">
               Learn More <span>→</span>
@@ -101,9 +101,9 @@ function About() {
               <div className="absolute -inset-4 border border-[#C9A84C]/10 bg-[#C9A84C]/5 -rotate-2" />
               <div className="relative aspect-[4/5] overflow-hidden group border border-[#EDEAE3]">
                 <img 
-                  src="/images/about_bond.png" 
+                  src="/images/about_bond.jpg" 
                   alt="Equestrian Excellence" 
-                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+                  className="w-full h-full object-cover scale-75 transition-transform duration-1000 group-hover:scale-[0.85]"
                 />
                 {/* Overlay Quote */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C2D]/90 via-[#0B1C2D]/20 to-transparent p-8 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -248,10 +248,11 @@ function Disciplines() {
 /* ─── News ─── */
 function News() {
   const news = [
-    { category: "Show Jumping", badgeCls: "bg-amber-50 text-amber-700", date: "15 Jan 2026", title: "Prospectus: KEA Show Jumping Championship 2025–2026", excerpt: "The Karnataka Equestrian Association announces the official prospectus for the State Show Jumping Championship. Registration is now open." },
-    { category: "Dressage", badgeCls: "bg-blue-50 text-blue-700", date: "20 Dec 2025", title: "Dressage Technical Guidelines 2026 Released", excerpt: "Updated dressage technical guidelines for the 2026 competition season are now available. All riders and trainers are requested to review." },
-    { category: "Eventing", badgeCls: "bg-emerald-50 text-emerald-700", date: "15 Dec 2025", title: "Eventing Technical Guidelines 2026", excerpt: "Technical guidelines for the 2026 eventing season have been published, covering all three phases: dressage, cross-country, and show jumping." },
-    { category: "Endurance", badgeCls: "bg-rose-50 text-rose-700", date: "01 Dec 2025", title: "Karnataka Endurance Ride 2026 — Prospectus Published", excerpt: "Details for the National One Star Endurance Ride are now available. The event will cover 100 KM over challenging terrain." },
+    { category: "SportsZ News", badgeCls: "bg-amber-50 text-amber-700", date: "21 May 2026", title: "Karnataka State Equestrian Competition at Embassy International Riding School", excerpt: "A state-level equestrian event featuring dressage and show jumping will take place on May 24, 2026, at Embassy International Riding School in Bengaluru.", href: "https://sportsz.news/news/karnataka-state-equestrian-competition-at-embassy-international-riding-school/" },
+    { category: "BizNews Daily", badgeCls: "bg-blue-50 text-blue-700", date: "21 May 2026", title: "Karnataka State Equestrian Competition at Embassy International Riding School", excerpt: "A state-level equestrian event featuring dressage and show jumping will take place on May 24, 2026, at Embassy International Riding School in Bengaluru.", href: "https://biznewsdaily.com/news/karnataka-state-equestrian-competition-at-embassy-international-riding-school/" },
+    { category: "Couture Fashion", badgeCls: "bg-emerald-50 text-emerald-700", date: "21 May 2026", title: "Karnataka State Equestrian Competition at Embassy International Riding School", excerpt: "A state-level equestrian event featuring dressage and show jumping will take place on May 24, 2026, at Embassy International Riding School in Bengaluru.", href: "https://couturefashion.net/news/karnataka-state-equestrian-competition-at-embassy-international-riding-school/" },
+    { category: "Business News For Profit", badgeCls: "bg-violet-50 text-violet-700", date: "21 May 2026", title: "Karnataka State Equestrian Competition at Embassy International Riding School", excerpt: "A state-level equestrian event featuring dressage and show jumping will take place on May 24, 2026, at Embassy International Riding School in Bengaluru.", href: "https://businessnewsforprofit.com/news/karnataka-state-equestrian-competition-at-embassy-international-riding-school/" },
+    { category: "Business News This Week", badgeCls: "bg-rose-50 text-rose-700", date: "21 May 2026", title: "Karnataka State Equestrian Competition at Embassy International Riding School", excerpt: "A state-level equestrian event featuring dressage and show jumping will take place on May 24, 2026, at Embassy International Riding School in Bengaluru.", href: "https://businessnewsthisweek.com/news/karnataka-state-equestrian-competition-at-embassy-international-riding-school/" },
   ];
 
   return (
@@ -275,9 +276,10 @@ function News() {
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {news.map((item, i) => (
             <BlurFade key={i} inView delay={0.08 * i}>
+              <a href={item.href} target="_blank" rel="noopener noreferrer" className="block h-full">
               <article className="relative border border-[#EDEAE3] p-8 hover:border-[#C9A84C]/40 hover:shadow-[0_8px_32px_rgba(201,168,76,0.08)] transition-all duration-300 group h-full flex flex-col overflow-hidden">
                 {/* Hover top accent */}
                 <div className="absolute top-0 left-0 right-0 h-0.5 bg-[#C9A84C] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -291,10 +293,11 @@ function News() {
                   {item.title}
                 </h3>
                 <p className="text-[#6B7280] text-[13px] leading-relaxed mb-7 flex-1">{item.excerpt}</p>
-                <a href="#" className="text-[10px] tracking-[0.18em] uppercase text-[#C9A84C] flex items-center gap-1.5 hover:gap-3 transition-all mt-auto">
+                <span className="text-[10px] tracking-[0.18em] uppercase text-[#C9A84C] flex items-center gap-1.5 group-hover:gap-3 transition-all mt-auto">
                   Read More <span>→</span>
-                </a>
+                </span>
               </article>
+              </a>
             </BlurFade>
           ))}
         </div>
@@ -306,9 +309,8 @@ function News() {
 /* ─── Events ─── */
 function Events() {
   const events = [
-    { type: "Championship", title: "Karnataka State Equestrian Championship 2026", date: "15–17 March 2026", venue: "Bangalore Turf Club", fee: "₹2,500 per entry", desc: "The premier annual championship bringing together Karnataka's finest equestrians across all five disciplines.", status: "Open" },
-    { type: "Regional League", title: "Regional Equestrian League — Karnataka Round", date: "5–7 April 2026", venue: "Palace Grounds, Mysuru", fee: "₹1,800 per entry", desc: "The REL Karnataka qualifier, featuring Dressage and Show Jumping. Part of the national REL circuit.", status: "Open" },
-    { type: "Training Camp", title: "Dressage Clinic & Training Camp", date: "20–22 February 2026", venue: "Royal Mysore Academy", fee: "₹3,500 per participant", desc: "An intensive three-day training camp led by EFI-certified instructors, covering fundamentals to advanced.", status: "Upcoming" },
+    { type: "Competition", title: "Karnataka State Equestrian Competition", date: "24th May 2026", venue: "Embassy International Riding School", fee: "₹1,000 per entry", desc: "", status: "Open" },
+    { type: "Upcoming", title: "All Other Events", date: "TBC", venue: "TBC", fee: "TBC", desc: "", status: "TBC" },
   ];
 
   return (
@@ -336,7 +338,7 @@ function Events() {
           </Link>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-2 gap-6">
           {events.map((ev, i) => (
             <BlurFade key={i} inView delay={0.1 * i}>
               <div className="relative bg-white border border-[#D4CFC4] hover:border-[#C9A84C]/50 hover:shadow-[0_8px_32px_rgba(201,168,76,0.10)] transition-all duration-300 group flex flex-col h-full overflow-hidden">
@@ -345,8 +347,8 @@ function Events() {
                 <div className="p-8 flex flex-col flex-1">
                   <div className="mb-5 flex items-center gap-3">
                     <span className="inline-block px-3 py-1 text-[9px] tracking-[0.14em] uppercase font-semibold bg-[#0B1C2D] text-[#C9A84C]">{ev.type}</span>
-                    <Badge className={`text-[9px] border-0 rounded-full ${ev.status === "Open" ? "bg-green-50 text-green-700" : "bg-amber-50 text-amber-700"}`}>
-                      {ev.status === "Open" ? "Reg. Open" : "Upcoming"}
+                    <Badge className={`text-[9px] border-0 rounded-full ${ev.status === "Open" ? "bg-green-50 text-green-700" : ev.status === "TBC" ? "bg-gray-100 text-gray-500" : "bg-amber-50 text-amber-700"}`}>
+                      {ev.status === "Open" ? "Reg. Open" : ev.status === "TBC" ? "TBC" : "Upcoming"}
                     </Badge>
                   </div>
                   <h3 className="font-heading text-xl font-medium text-[#0B1C2D] leading-snug mb-4 group-hover:text-[#C9A84C] transition-colors">{ev.title}</h3>
@@ -376,10 +378,9 @@ function Events() {
 /* ─── Leadership ─── */
 function Leadership() {
   const leaders = [
-    { initials: "RS", name: "Brig. R.K. Sharma (Retd.)", role: "President", href: "/about/president" },
-    { initials: "PR", name: "Col. P.N. Rao (Retd.)", role: "President Elect", href: "/office-bearers/executive-committee" },
-    { initials: "AM", name: "Dr. Anand Murthy", role: "Secretary General", href: "/about/secretary" },
-    { initials: "PK", name: "Ms. Priya Krishnaswamy", role: "Joint Secretary", href: "/office-bearers/executive-committee" },
+    { initials: "RS", name: "Mr. Rudrapratap Singh", role: "President", href: "/about/president" },
+    { initials: "NM", name: "Mr. Navaneet Murugesh", role: "Secretary General", href: "/about/secretary" },
+    { initials: "JB", name: "Ms. Judith Bidappa", role: "Joint Secretary", href: "/office-bearers/executive-committee" },
   ];
 
   return (
@@ -403,7 +404,7 @@ function Leadership() {
           </Link>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-0 border border-[#EDEAE3]">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-0 border border-[#EDEAE3]">
           {leaders.map((l, i) => (
             <BlurFade key={l.name} inView delay={0.1 * i}>
               <Link
@@ -423,7 +424,7 @@ function Leadership() {
                 </div>
                 <div className="text-[9px] tracking-[0.18em] uppercase text-[#C9A84C] mb-2">{l.role}</div>
                 <div className="font-heading text-base font-medium text-[#0B1C2D] group-hover:text-[#C9A84C] transition-colors">{l.name}</div>
-                <div className="text-[10px] text-[#9CA3AF] mt-1.5">Term 2024–2026</div>
+                <div className="text-[10px] text-[#9CA3AF] mt-1.5">Term 2024–2029</div>
               </Link>
             </BlurFade>
           ))}
@@ -481,9 +482,11 @@ function MembershipCTA() {
             ))}
           </ul>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <ShimmerButton shimmerColor="#C9A84C" background="#C9A84C" className="text-[#0B1C2D] text-[10px] tracking-[0.22em] uppercase font-semibold">
-              Apply for Membership
-            </ShimmerButton>
+            <a href="mailto:secretariat@kea.org.in">
+              <ShimmerButton shimmerColor="#C9A84C" background="#C9A84C" className="text-[#0B1C2D] text-[10px] tracking-[0.22em] uppercase font-semibold">
+                Apply for Membership
+              </ShimmerButton>
+            </a>
             <Link href="/membership" className="px-10 py-4 border border-white/15 text-white/70 text-[10px] tracking-[0.22em] uppercase hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors">
               Membership Types
             </Link>

@@ -16,10 +16,62 @@ export const metadata: Metadata = {
 };
 
 const types = [
-  { title: "Individual", fee: "₹2,000", period: "per year", tag: "Most Popular", desc: "For registered riders, trainers, and equestrian enthusiasts. Includes full competition eligibility and voting rights.", benefits: ["Full competition eligibility at KEA events", "EFI rider registration support", "Voting rights at AGM", "Newsletter and technical updates", "10% discount on event entry fees"] },
-  { title: "Life", fee: "₹15,000", period: "one-time", tag: "Best Value", desc: "Lifetime KEA membership with all Individual member benefits. Ideal for long-term members of the equestrian community.", benefits: ["All Individual member benefits", "Permanent membership card", "Priority event registration", "Lifetime access to KEA resources", "Recognition in association publications"] },
-  { title: "Junior", fee: "₹1,000", period: "per year", tag: "Under 18", desc: "For riders under 18 years of age. Requires parent or guardian co-signature on application.", benefits: ["Competition eligibility in junior categories", "EFI junior rider registration", "Training programme access", "Youth development resources", "Newsletter and updates"] },
-  { title: "Institutional", fee: "₹10,000", period: "per year", tag: "Clubs & Academies", desc: "For equestrian clubs, riding academies, and institutional bodies affiliated with KEA.", benefits: ["Institutional affiliation certificate", "Club event hosting rights", "Bulk member registration support", "Priority venue allocation", "Listed on KEA club directory"] },
+  {
+    title: "Associate",
+    fee: "₹2,000",
+    period: "per year",
+    tag: "Most Popular",
+    desc: "For registered riders, trainers, and equestrian enthusiasts.",
+    benefits: [
+      "Eligibility at KEA events, meetings and committee",
+      "EFI rider registration support",
+      "Newsletter and technical updates",
+      "10% discount applicable on annual membership for women, defence personnel, and eminent sports persons."
+    ]
+  },
+  {
+    title: "Life",
+    fee: "₹50,000",
+    period: "one-time",
+    tag: "Best Value",
+    desc: "Lifetime KEA membership with all Individual member benefits. Ideal for long-term members of the equestrian community.",
+    benefits: [
+      "All Individual member benefits",
+      "Permanent membership card",
+      "Priority event registration",
+      "Lifetime access to KEA resources",
+      "Recognition in association publications"
+    ]
+  },
+  {
+    title: "Riding",
+    fee: "₹1,000",
+    period: "per year",
+    tag: "Under 18",
+    desc: "For riders under 18 years of age. Requires parent or guardian co-signature on application.",
+    note: "<strong>For all Categories active riders</strong>",
+    benefits: [
+      "Competition entry in your categories",
+      "EFI rider registration",
+      "Training programme access",
+      "Youth development resources",
+      "Newsletter and updates"
+    ]
+  },
+  {
+    title: "Institutional",
+    fee: "₹10,000",
+    period: "per year",
+    tag: "Clubs & Academies",
+    desc: "For equestrian clubs, riding academies, and institutional bodies affiliated with KEA.",
+    benefits: [
+      "Institutional affiliation certificate",
+      "Club event hosting rights",
+      "Bulk member registration support",
+      "Priority venue allocation",
+      "Listed on KEA club directory"
+    ]
+  },
 ];
 
 const steps = [
@@ -77,7 +129,7 @@ export default function MembershipPage() {
               {/* Community Image Background */}
               <div className="absolute inset-0 z-0">
                 <img 
-                  src="/images/membership_community.png" 
+                  src="/images/membership_community.jpg" 
                   alt="KEA Community" 
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                 />
@@ -86,10 +138,10 @@ export default function MembershipPage() {
 
               <div className="relative z-10 grid grid-cols-2 gap-px bg-[#C9A84C]/10 h-full">
                 {[
-                  { num: 500, suffix: "+", label: "Active Members" },
+                  { num: 100, suffix: "+", label: "Active Members" },
                   { num: 5, suffix: "", label: "Disciplines" },
-                  { num: 20, suffix: "+", label: "Annual Events" },
-                  { num: 30, suffix: "+", label: "Years of Service" },
+                  { num: 20, suffix: "+", label: "Events" },
+                  { num: 10, suffix: "+", label: "Years of Service" },
                 ].map((s) => (
                   <div key={s.label} className="p-10 text-center backdrop-blur-[2px] bg-white/5 hover:bg-white/10 transition-colors">
                     <div className="font-heading text-4xl lg:text-5xl font-light text-white mb-2 shadow-sm">
@@ -126,6 +178,9 @@ export default function MembershipPage() {
                     <div className="text-[11px] text-[#9CA3AF] mt-1">{t.period}</div>
                   </div>
                   <div className="p-7 flex-1 flex flex-col relative z-10">
+                    {"note" in t && t.note && (
+                      <p className="mb-3 text-[11px] text-[#C9A84C] leading-relaxed" dangerouslySetInnerHTML={{ __html: t.note }} />
+                    )}
                     <p className="text-[#6B7280] text-[12px] leading-relaxed mb-5">{t.desc}</p>
                     <ul className="space-y-2.5 flex-1">
                       {t.benefits.map((b) => (
@@ -135,9 +190,9 @@ export default function MembershipPage() {
                         </li>
                       ))}
                     </ul>
-                    <Link href="/contact" className="mt-6 block text-center py-3 bg-[#F7F4EF] border border-[#EDEAE3] text-[#0B1C2D] text-[10px] tracking-[0.14em] uppercase hover:bg-[#C9A84C] hover:text-[#0B1C2D] hover:border-[#C9A84C] transition-colors font-medium">
+                    <a href="mailto:secretariat@kea.org.in" className="mt-6 block text-center py-3 bg-[#F7F4EF] border border-[#EDEAE3] text-[#0B1C2D] text-[10px] tracking-[0.14em] uppercase hover:bg-[#C9A84C] hover:text-[#0B1C2D] hover:border-[#C9A84C] transition-colors font-medium">
                       Apply Now
-                    </Link>
+                    </a>
                   </div>
                 </MagicCard>
               </BlurFade>
@@ -191,7 +246,7 @@ export default function MembershipPage() {
               <div className="border border-[#C9A84C]/20 p-6">
                 <p className="text-white/45 text-[12px] leading-relaxed">
                   For queries about the application process, contact the KEA Secretariat at{" "}
-                  <span className="text-[#C9A84C]/70">secretary@karnatakaequestrian.in</span> or call us at{" "}
+                  <span className="text-[#C9A84C]/70">secretariat@kea.org.in</span> or call us at{" "}
                   <span className="text-[#C9A84C]/70">+91 80 0000 0000</span>.
                 </p>
               </div>

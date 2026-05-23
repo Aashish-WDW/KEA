@@ -203,7 +203,7 @@ export default function PastPresidentsPage() {
           <FadeText delay={0.1} inView>
             <p className="text-white/45 text-[12px] leading-relaxed max-w-2xl">
               For information on KEA's full administrative history or earlier records, please contact the Secretariat at{" "}
-              <span className="text-[#C9A84C]/70">secretary@karnatakaequestrian.in</span>
+              <span className="text-[#C9A84C]/70">secretariat@kea.org.in</span>
             </p>
           </FadeText>
         </div>

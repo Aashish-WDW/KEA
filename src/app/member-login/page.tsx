@@ -18,7 +18,7 @@ export default function MemberLoginPage() {
         {/* Left — Image panel (hidden on mobile) */}
         <div className="hidden lg:block w-[45%] relative overflow-hidden">
           <img
-            src="/images/hero_heritage.png"
+            src="/images/hero_heritage.jpg"
             alt="Equestrian heritage"
             className="w-full h-full object-cover"
           />
@@ -138,8 +138,8 @@ export default function MemberLoginPage() {
               <div className="mt-6 text-center space-y-1.5">
                 <p className="text-[11px] text-[#9CA3AF]">
                   For login issues, contact{" "}
-                  <a href="mailto:secretary@karnatakaequestrian.in" className="text-[#C9A84C]/80 hover:text-[#C9A84C] transition-colors">
-                    secretary@karnatakaequestrian.in
+                  <a href="mailto:secretariat@kea.org.in" className="text-[#C9A84C]/80 hover:text-[#C9A84C] transition-colors">
+                    secretariat@kea.org.in
                   </a>
                 </p>
                 <p className="text-[10px] text-[#B0A898] tracking-[0.06em]">

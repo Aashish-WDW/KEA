@@ -1,54 +1,87 @@
+"use client";
+
 import InnerPageShell from "@/components/InnerPageShell";
 import { BlurFade } from "@/components/ui/blur-fade";
-import { BoxReveal } from "@/components/ui/box-reveal";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import { useState, useEffect, useCallback } from "react";
 
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Photo Gallery",
-  description: "A visual record of KEA competitions, clinics, and the equestrian community across Karnataka.",
-};
-
-const categories = [
-  {
-    label: "State Championships",
-    slug: "championships",
-    count: 24,
-    year: "2025",
-    images: [
-      { src: "/images/hero_championship.png", caption: "Karnataka State Championship 2025 — Show Jumping Final" },
-      { src: "/images/hero_disciplines.png", caption: "Dressage Grand Prix — Palace Grounds, Bangalore" },
-      { src: "/images/events_hero.png", caption: "Medal Ceremony, Karnataka State Championship" },
-      { src: "/images/disciplines_bg.png", caption: "Eventing Cross-Country — Cubbon Park Grounds" },
-    ],
-  },
-  {
-    label: "Training & Clinics",
-    slug: "clinics",
-    count: 18,
-    year: "2024–2025",
-    images: [
-      { src: "/images/about_bond.png", caption: "EFI Dressage Clinic — Royal Mysore Academy" },
-      { src: "/images/membership_community.png", caption: "Junior Show Jumping Training Camp" },
-      { src: "/images/discipline_endurance.png", caption: "Endurance Conditioning Workshop — Chikkaballapur" },
-      { src: "/images/discipline_tent_pegging.png", caption: "Tent Pegging Technique Session — Belagavi" },
-    ],
-  },
-  {
-    label: "Horses & Facilities",
-    slug: "horses",
-    count: 31,
-    year: "2024–2025",
-    images: [
-      { src: "/images/hero_heritage.png", caption: "Pre-competition veterinary inspection — Palace Grounds" },
-      { src: "/images/hero_identity.png", caption: "Warm-up arena, Bangalore Turf Club" },
-      { src: "/images/contact_hero.png", caption: "Horse stabling, Mysuru Championship venue" },
-    ],
-  },
+const images = [
+  "/gallery/DSC02366.JPG",
+  "/gallery/DSC02340.JPG",
+  "/gallery/DSC02283.JPG",
+  "/gallery/DSC02229.JPG",
+  "/gallery/DSC02178.JPG",
+  "/gallery/DSC02182.JPG",
+  "/gallery/DSC02121.JPG",
+  "/gallery/DSC02108.JPG",
+  "/gallery/DSC01973.JPG",
+  "/gallery/DSC01895.JPG",
+  "/gallery/DSC01861.JPG",
+  "/gallery/DSC01834.JPG",
+  "/gallery/DSC01800.JPG",
+  "/gallery/DSC01798.JPG",
+  "/gallery/DSC01654.JPG",
+  "/gallery/DSC01646.JPG",
+  "/gallery/DSC01605.JPG",
+  "/gallery/DSC01502.JPG",
+  "/gallery/DSC01485.JPG",
+  "/gallery/DSC01357.JPG",
+  "/gallery/DSC01080.JPG",
+  "/gallery/DSC00881.JPG",
 ];
 
+function Lightbox({ index, onClose, onPrev, onNext }: { index: number; onClose: () => void; onPrev: () => void; onNext: () => void }) {
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+      if (e.key === "ArrowRight") onNext();
+      if (e.key === "ArrowLeft") onPrev();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose, onNext, onPrev]);
+
+  return (
+    <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center" onClick={onClose}>
+      {/* Close */}
+      <button className="absolute top-5 right-6 text-white/60 hover:text-white text-3xl leading-none z-10" onClick={onClose}>×</button>
+
+      {/* Prev */}
+      <button
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-[#C9A84C] text-4xl z-10 px-3"
+        onClick={(e) => { e.stopPropagation(); onPrev(); }}
+      >‹</button>
+
+      {/* Image */}
+      <img
+        src={images[index]}
+        alt={`Photo ${index + 1}`}
+        className="max-h-[90vh] max-w-[90vw] object-contain select-none"
+        onClick={(e) => e.stopPropagation()}
+      />
+
+      {/* Next */}
+      <button
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-[#C9A84C] text-4xl z-10 px-3"
+        onClick={(e) => { e.stopPropagation(); onNext(); }}
+      >›</button>
+
+      {/* Counter */}
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/30 text-[11px] tracking-[0.2em] uppercase">
+        {index + 1} / {images.length}
+      </div>
+    </div>
+  );
+}
+
 export default function GalleryPage() {
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  const open = (i: number) => setLightboxIndex(i);
+  const close = useCallback(() => setLightboxIndex(null), []);
+  const prev = useCallback(() => setLightboxIndex((i) => (i! - 1 + images.length) % images.length), []);
+  const next = useCallback(() => setLightboxIndex((i) => (i! + 1) % images.length), []);
+
   return (
     <InnerPageShell
       title="Gallery"
@@ -58,60 +91,40 @@ export default function GalleryPage() {
       {/* Intro strip */}
       <section className="bg-white py-10 border-b border-[#EDEAE3]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#6B7280] text-sm">A visual record of KEA's competitions, clinics, and the equestrian community across Karnataka.</p>
-          <span className="shrink-0 text-[10px] tracking-[0.14em] uppercase text-[#9CA3AF]">
-            {categories.reduce((sum, c) => sum + c.count, 0)}+ photographs
-          </span>
+          <p className="text-[#6B7280] text-sm">A visual record of KEA's competitions and the equestrian community across Karnataka.</p>
+          <span className="shrink-0 text-[10px] tracking-[0.14em] uppercase text-[#9CA3AF]">{images.length} photographs</span>
         </div>
       </section>
 
-      {/* Categories */}
-      {categories.map((cat, catIdx) => (
-        <section key={cat.slug} className="bg-[#F7F4EF] py-16 border-b border-[#EDEAE3] last:border-0">
-          <div className="max-w-7xl mx-auto px-6">
-            {/* Section header */}
-            <BlurFade delay={0.1} inView>
-              <div className="flex items-center justify-between mb-8">
-                <div>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="h-px w-6 bg-[#C9A84C]" />
-                    <span className="text-[9px] tracking-[0.2em] uppercase text-[#C9A84C] font-medium">{cat.year}</span>
+      {/* Grid */}
+      <section className="bg-[#F7F4EF] py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {images.map((src, i) => (
+              <BlurFade key={src} delay={0.04 * i} inView>
+                <div
+                  className="relative group overflow-hidden aspect-[4/3] cursor-pointer"
+                  onClick={() => open(i)}
+                >
+                  <img
+                    src={src}
+                    alt={`KEA Competition 2026 — ${i + 1}`}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-[#0B1C2D]/0 group-hover:bg-[#0B1C2D]/40 transition-colors duration-300 flex items-center justify-center">
+                    <span className="text-white/0 group-hover:text-white/80 text-2xl transition-all duration-300 select-none">⊕</span>
                   </div>
-                  <h2 className="font-heading text-2xl font-light text-[#0B1C2D]">{cat.label}</h2>
                 </div>
-                <span className="text-[10px] tracking-[0.12em] uppercase text-[#9CA3AF] border border-[#EDEAE3] px-3 py-1">{cat.count} photos</span>
-              </div>
-            </BlurFade>
-
-            {/* Image Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {cat.images.map((item, i) => (
-                <BlurFade key={i} delay={0.1 + i * 0.05} inView>
-                  <div className="relative group overflow-hidden aspect-[4/3] cursor-pointer">
-                    <img
-                      src={item.src}
-                      alt={item.caption}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    {/* Hover overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1C2D]/80 via-[#0B1C2D]/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end p-4">
-                      <p className="text-white text-[11px] leading-snug">{item.caption}</p>
-                    </div>
-                    {/* Corner accent */}
-                    <div className="absolute top-3 left-3 w-4 h-px bg-[#C9A84C]/40 opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="absolute top-3 left-3 w-px h-4 bg-[#C9A84C]/40 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </div>
-                </BlurFade>
-              ))}
-            </div>
+              </BlurFade>
+            ))}
           </div>
-        </section>
-      ))}
+        </div>
+      </section>
 
       {/* Submit photos CTA */}
       <section className="relative bg-[#0B1C2D] py-14 overflow-hidden">
-        <AnimatedGridPattern className="opacity-30" numSquares={10} maxOpacity={0.05} />
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <AnimatedGridPattern className="opacity-30 pointer-events-none" numSquares={10} maxOpacity={0.05} />
+        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
           <BlurFade delay={0.1} inView>
             <div>
               <h3 className="font-heading text-xl font-light text-white mb-2">Share Your <span className="italic">Photographs</span></h3>
@@ -120,11 +133,19 @@ export default function GalleryPage() {
               </p>
             </div>
           </BlurFade>
-          <a href="mailto:info@karnatakaequestrian.in" className="shrink-0 px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors">
+          <button
+            onClick={() => window.location.href = "mailto:secretariat@kea.org.in"}
+            className="shrink-0 px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors"
+          >
             Submit Photos →
-          </a>
+          </button>
         </div>
       </section>
+
+      {/* Lightbox */}
+      {lightboxIndex !== null && (
+        <Lightbox index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
+      )}
     </InnerPageShell>
   );
 }

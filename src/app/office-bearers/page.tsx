@@ -6,10 +6,9 @@ import { MagicCard } from "@/components/ui/magic-card";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 
 const keyBearers = [
-  { initials: "RS", name: "Brig. R.K. Sharma (Retd.)", role: "President", bio: "A decorated Brigadier of the Indian Army with over 35 years of military service, Brig. Sharma brings a deep love of horsemanship and strong organisational leadership to the Association.", href: "/about/president" },
-  { initials: "PR", name: "Col. P.N. Rao (Retd.)", role: "President Elect", bio: "Col. Rao has been an active equestrian competitor and administrator for over two decades, having previously served as a District Chapter President.", href: "#" },
-  { initials: "AM", name: "Dr. Anand Murthy", role: "Secretary General", bio: "Dr. Murthy oversees all administrative, regulatory, and EFI coordination functions of the Association. A qualified veterinarian with a passion for equine welfare.", href: "/about/secretary" },
-  { initials: "PK", name: "Ms. Priya Krishnaswamy", role: "Joint Secretary", bio: "Ms. Krishnaswamy manages event coordination, membership services, and communications. She brings extensive experience in sports administration.", href: "#" },
+  { initials: "RS", name: "Mr. Rudrapratap Singh", role: "President", bio: "", href: "/about/president" },
+  { initials: "NM", name: "Mr. Navaneet Murugesh", role: "Secretary General", bio: "", href: "/about/secretary" },
+  { initials: "JB", name: "Ms. Judith Bidappa", role: "Joint Secretary", bio: "", href: "#" },
 ];
 
 const execCommittee = [
@@ -43,7 +42,7 @@ export default function OfficeBearersPage() {
             <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-14">Our <span className="italic">Leadership</span></h2>
           </BoxReveal>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {keyBearers.map((bearer, i) => (
               <BlurFade key={bearer.name} delay={0.2 + i * 0.08} inView>
                 <MagicCard className="bg-white border border-[#EDEAE3] hover:border-[#C9A84C]/35 hover:shadow-[0_4px_24px_rgba(201,168,76,0.07)] transition-all duration-300 group flex flex-col h-full">
@@ -73,7 +72,7 @@ export default function OfficeBearersPage() {
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-8 bg-[#C9A84C]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Executive Committee 2024–2026</span>
+              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Executive Committee 2024–2029</span>
             </div>
             <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-14">Committee <span className="italic">Members</span></h2>
           </BlurFade>

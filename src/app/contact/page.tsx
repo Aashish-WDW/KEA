@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 };
 
 const team = [
-  { initials: "AM", name: "Dr. Anand Murthy", role: "Secretary General", phone: "+91 98800 00000", email: "secretary@karnatakaequestrian.in" },
-  { initials: "PK", name: "Ms. Priya Krishnaswamy", role: "Joint Secretary", phone: "+91 98800 00001", email: "jointsec@karnatakaequestrian.in" },
-  { initials: "VH", name: "Mr. Vikram Hegde", role: "Treasurer", phone: "+91 98800 00002", email: "treasurer@karnatakaequestrian.in" },
+  { initials: "NM", name: "Mr. Navaneet Murugesh", role: "Secretary General", phone: "+91 98800 00000", email: "secretariat@kea.org.in" },
+  { initials: "JB", name: "Ms. Judith Bidappa", role: "Joint Secretary", phone: "+91 98800 00001", email: "secretariat@kea.org.in" },
+  { initials: "VH", name: "Mr. Vikram Hegde", role: "Treasurer", phone: "+91 98800 00002", email: "secretariat@kea.org.in" },
 ];
 
 export default function ContactPage() {
@@ -39,83 +39,6 @@ export default function ContactPage() {
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-[1fr_380px] gap-14 relative z-10">
 
-          {/* Contact form */}
-          <BlurFade delay={0.1} inView>
-            <div className="relative bg-white border border-[#EDEAE3] p-10">
-              <BorderBeam duration={15} colorFrom="#C9A84C" colorTo="#E8D59E" />
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-px w-8 bg-[#C9A84C]" />
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Send a Message</span>
-              </div>
-              <BoxReveal delay={0.15}>
-                <h2 className="font-heading text-2xl lg:text-3xl font-light text-[#0B1C2D] mb-8">Get in <span className="italic">Touch</span></h2>
-              </BoxReveal>
-
-              <FadeText delay={0.25} inView>
-                <form className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-[10px] tracking-[0.14em] uppercase text-[#6B7280] mb-2">Full Name</label>
-                    <input
-                      type="text"
-                      placeholder="Your full name"
-                      className="w-full border border-[#EDEAE3] bg-[#F7F4EF] px-4 py-3 text-sm text-[#0B1C2D] placeholder:text-[#C4BBAF] focus:outline-none focus:border-[#C9A84C] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] tracking-[0.14em] uppercase text-[#6B7280] mb-2">Email Address</label>
-                    <input
-                      type="email"
-                      placeholder="you@example.com"
-                      className="w-full border border-[#EDEAE3] bg-[#F7F4EF] px-4 py-3 text-sm text-[#0B1C2D] placeholder:text-[#C4BBAF] focus:outline-none focus:border-[#C9A84C] transition-colors"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label className="block text-[10px] tracking-[0.14em] uppercase text-[#6B7280] mb-2">Phone Number</label>
-                    <input
-                      type="tel"
-                      placeholder="+91 00000 00000"
-                      className="w-full border border-[#EDEAE3] bg-[#F7F4EF] px-4 py-3 text-sm text-[#0B1C2D] placeholder:text-[#C4BBAF] focus:outline-none focus:border-[#C9A84C] transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-[10px] tracking-[0.14em] uppercase text-[#6B7280] mb-2">Subject</label>
-                    <select className="w-full border border-[#EDEAE3] bg-[#F7F4EF] px-4 py-3 text-sm text-[#0B1C2D] focus:outline-none focus:border-[#C9A84C] transition-colors appearance-none">
-                      <option value="">Select a subject</option>
-                      <option>General Enquiry</option>
-                      <option>Membership Application</option>
-                      <option>Event Registration</option>
-                      <option>EFI Rider / Horse Registration</option>
-                      <option>Discipline / Technical Queries</option>
-                      <option>Media & Press</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[10px] tracking-[0.14em] uppercase text-[#6B7280] mb-2">Message</label>
-                  <textarea
-                    rows={6}
-                    placeholder="Write your message here..."
-                    className="w-full border border-[#EDEAE3] bg-[#F7F4EF] px-4 py-3 text-sm text-[#0B1C2D] placeholder:text-[#C4BBAF] focus:outline-none focus:border-[#C9A84C] transition-colors resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-4 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.22em] uppercase font-semibold hover:bg-[#b8963e] transition-colors"
-                >
-                  Send Message
-                </button>
-                </form>
-              </FadeText>
-            </div>
-          </BlurFade>
-
           {/* Contact details */}
           <div className="space-y-8">
             {/* Address */}
@@ -125,9 +48,9 @@ export default function ContactPage() {
                   <div className="text-[10px] tracking-[0.18em] uppercase text-[#C9A84C] mb-4">Headquarters</div>
                   <h3 className="font-heading text-lg font-medium text-[#0B1C2D] mb-3">Karnataka Equestrian Association</h3>
                   <address className="text-[#6B7280] text-sm not-italic leading-relaxed">
-                    Palace Grounds Equestrian Complex<br />
-                    Bangalore – 560 052<br />
-                    Karnataka, India
+                    F2 Block-Mahogany, Manyata Business Park<br />
+                    Outer Ring Road, Nagavara<br />
+                    Bangalore, KA 560043
                   </address>
                 </div>
               </MagicCard>
@@ -141,8 +64,8 @@ export default function ContactPage() {
                   <div className="space-y-4">
                     {[
                       { label: "Phone", value: "+91 80 0000 0000" },
-                      { label: "Email", value: "info@karnatakaequestrian.in" },
-                      { label: "Secretariat", value: "secretary@karnatakaequestrian.in" },
+                      { label: "Email", value: "secretariat@kea.org.in" },
+                      { label: "Secretariat", value: "secretariat@kea.org.in" },
                       { label: "Office Hours", value: "Mon – Fri, 9:00 AM – 5:00 PM" },
                     ].map((row) => (
                       <div key={row.label} className="flex gap-4 pb-4 border-b border-[#EDEAE3] last:border-0 last:pb-0">
@@ -161,7 +84,7 @@ export default function ContactPage() {
                 <div className="text-[10px] tracking-[0.18em] uppercase text-[#C9A84C] mb-3">EFI Services</div>
                 <p className="text-white/50 text-[12px] leading-relaxed">
                   For EFI services including horse passports, NOCs, entries for national competitions, rider and horse registration, and certificates — write to us at{" "}
-                  <span className="text-[#C9A84C]/75">info@karnatakaequestrian.in</span>
+                  <span className="text-[#C9A84C]/75">secretariat@kea.org.in</span>
                 </p>
               </div>
             </BlurFade>

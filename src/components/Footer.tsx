@@ -42,9 +42,9 @@ export default function Footer() {
                 <div className="text-[9px] tracking-[0.16em] uppercase text-[#C9A84C]/65 mt-0.5">Association</div>
               </div>
             </div>
-            <p className="text-white/30 text-[12px] leading-relaxed mb-6">The apex body governing equestrian sports in Karnataka. Affiliated with EFI, IOA, and MYAS/SAI.</p>
+            <p className="text-white/30 text-[12px] leading-relaxed mb-6">The apex body governing equestrian sports in Karnataka. Affiliated with EFI, IOA, and MYAS.</p>
             <div className="flex gap-2 flex-wrap">
-              {["EFI", "IOA", "MYAS/SAI", "AEF"].map((tag) => (
+              {["EFI", "IOA", "MYAS", "AEF"].map((tag) => (
                 <span key={tag} className="text-[8px] tracking-[0.12em] uppercase border border-[#C9A84C]/15 text-[#C9A84C]/40 px-2 py-1">{tag}</span>
               ))}
             </div>
@@ -81,8 +81,8 @@ export default function Footer() {
           <div>
             <h4 className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] mb-6">Contact Us</h4>
             <div className="space-y-4 text-[12px] text-white/35 leading-relaxed">
-              <p>Karnataka Equestrian Association<br />Bangalore, Karnataka – 560 001<br />India</p>
-              <p className="hover:text-[#C9A84C]/70 transition-colors cursor-pointer">info@karnatakaequestrian.in</p>
+              <p>Karnataka Equestrian Association<br />F2 Block-Mahogany, Manyata Business Park<br />Outer Ring Road, Nagavara<br />Bangalore, KA 560043</p>
+              <p className="hover:text-[#C9A84C]/70 transition-colors cursor-pointer">secretariat@kea.org.in</p>
               <p>+91 80 0000 0000</p>
             </div>
             <div className="mt-6">

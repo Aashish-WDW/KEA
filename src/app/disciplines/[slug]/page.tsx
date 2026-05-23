@@ -37,7 +37,7 @@ const DISCIPLINES: Record<string, DisciplineInfo> = {
       { label: "Governing Body", value: "FEI / EFI / KEA" },
     ],
     howToCompete: [
-      "Join the Karnataka Equestrian Association as an Individual Member.",
+      "Join the Karnataka Equestrian Association as a Riding Member.",
       "Register as a rider with the Equestrian Federation of India (EFI) to obtain your Rider ID.",
       "Your horse must be registered with EFI and a valid horse passport obtained.",
       "Enter KEA-sanctioned dressage competitions through the annual event prospectus.",
@@ -65,7 +65,7 @@ const DISCIPLINES: Record<string, DisciplineInfo> = {
       "Obtain KEA membership and an EFI Rider ID.",
       "Register your horse with EFI for a valid horse registration number.",
       "Enter KEA show jumping events through the seasonal prospectus.",
-      "Compete at the appropriate height category for your level — starting at 90cm for novice riders.",
+      "Compete at the appropriate height category for your level — starting at 60cm for novice riders.",
       "Progress through KEA state qualifiers to access EFI national-level competitions.",
     ],
   },
@@ -189,7 +189,7 @@ export default async function DisciplinePage({
               slug === "tent-pegging" ? "/images/discipline_tent_pegging.png" :
               slug === "endurance" ? "/images/discipline_endurance.png" :
               slug === "show-jumping" ? "/images/hero_championship.png" :
-              slug === "dressage" ? "/images/hero_disciplines.png" :
+              slug === "dressage" ? "/images/hero_disciplines.jpg" :
               "/images/hero_championship.png"
             }
             alt="" 
@@ -315,7 +315,7 @@ export default async function DisciplinePage({
             <p className="text-[#6B7280] text-sm mt-1">Join KEA and register for upcoming {discipline.title} events in Karnataka.</p>
           </div>
           <div className="flex gap-3 shrink-0">
-            <Link href="/membership" className="px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors">Join KEA</Link>
+            <a href="mailto:secretariat@kea.org.in" className="px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors">Join KEA</a>
             <Link href="/events" className="px-8 py-3.5 border border-[#0B1C2D]/18 text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors">View Events</Link>
           </div>
         </div>

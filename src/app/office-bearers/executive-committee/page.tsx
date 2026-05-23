@@ -6,11 +6,9 @@ import { MagicCard } from "@/components/ui/magic-card";
 import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
 
 const officeBearers = [
-  { initials: "RS", name: "Brig. R.K. Sharma (Retd.)", role: "President", term: "2024–2026", bio: "A decorated Brigadier of the Indian Army with over 35 years of service. Brig. Sharma has competed in show jumping at national level and brings deep administrative experience to the presidency." },
-  { initials: "PR", name: "Col. P.N. Rao (Retd.)", role: "President Elect", term: "2024–2026", bio: "Col. Rao has served the equestrian community for over two decades in Karnataka, previously heading the Mysuru District Chapter and serving on the EFI national technical panel." },
-  { initials: "AM", name: "Dr. Anand Murthy", role: "Secretary General", term: "2024–2026", bio: "A qualified veterinarian and experienced sports administrator, Dr. Murthy manages all EFI coordination, member services, and the annual competition calendar." },
-  { initials: "PK", name: "Ms. Priya Krishnaswamy", role: "Joint Secretary", term: "2024–2026", bio: "Ms. Krishnaswamy brings extensive experience in sports event management and member communications. She oversees KEA's outreach and membership programmes." },
-  { initials: "VH", name: "Mr. Vikram Hegde", role: "Treasurer", term: "2024–2026", bio: "A chartered accountant and equestrian enthusiast, Mr. Hegde manages KEA's finances, annual audit, and fee structures with transparency and rigour." },
+  { initials: "RS", name: "Mr. Rudrapratap Singh", role: "President", term: "2024–2029", bio: "" },
+  { initials: "NM", name: "Mr. Navaneet Murugesh", role: "Secretary General", term: "2024–2029", bio: "" },
+  { initials: "JB", name: "Ms. Judith Bidappa", role: "Joint Secretary", term: "2024–2029", bio: "" },
 ];
 
 const execMembers = [
@@ -36,7 +34,7 @@ export default function ExecutiveCommitteePage() {
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-px w-8 bg-[#C9A84C]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Office Bearers 2024–2026</span>
+              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Office Bearers 2024–2029</span>
             </div>
           </BlurFade>
           <BoxReveal delay={0.15}>

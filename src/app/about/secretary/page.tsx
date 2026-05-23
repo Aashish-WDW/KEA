@@ -18,16 +18,16 @@ export default function SecretaryMessagePage() {
             <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
               <BlurFade delay={0.1} inView>
               <div className="w-36 h-36 rounded-full border-2 border-[#C9A84C]/40 bg-white flex items-center justify-center mb-6">
-                <span className="font-heading text-3xl font-medium text-[#0B1C2D] tracking-wider">AM</span>
+                <span className="font-heading text-3xl font-medium text-[#0B1C2D] tracking-wider">NM</span>
               </div>
               <div className="text-[10px] tracking-[0.18em] uppercase text-[#C9A84C] mb-2">Secretary General</div>
-              <h3 className="font-heading text-xl font-medium text-[#0B1C2D] mb-1">Dr. Anand Murthy</h3>
+              <h3 className="font-heading text-xl font-medium text-[#0B1C2D] mb-1">Mr. Navaneet Murugesh</h3>
               <p className="text-[#6B7280] text-xs leading-relaxed mt-2 max-w-[220px]">Karnataka Equestrian Association<br />Bangalore, Karnataka</p>
-              <p className="text-[11px] text-[#9CA3AF] mt-2">secretary@karnatakaequestrian.in</p>
+              <p className="text-[11px] text-[#9CA3AF] mt-2">secretariat@kea.org.in</p>
 
               <div className="mt-8 pt-8 border-t border-[#EDEAE3] w-full">
                 <div className="text-[10px] tracking-[0.14em] uppercase text-[#C9A84C] mb-3">Term</div>
-                <div className="text-[#0B1C2D] text-sm">2024 – 2026</div>
+                <div className="text-[#0B1C2D] text-sm">2024 – 2029</div>
               </div>
               </BlurFade>
             </div>

@@ -12,28 +12,8 @@ type NavItem = { label: string; href: string; children?: NavChild[] };
 
 const navLinks: NavItem[] = [
   { label: "Home", href: "/" },
-  {
-    label: "About Us",
-    href: "/about",
-    children: [
-      { label: "About KEA", href: "/about" },
-      { label: "History of Equestrian Sport", href: "/about/history" },
-      { label: "President's Message", href: "/about/president" },
-      { label: "Secretary's Message", href: "/about/secretary" },
-      { label: "Bylaws", href: "/about/bylaws" },
-    ],
-  },
-  {
-    label: "Office Bearers",
-    href: "/office-bearers",
-    children: [
-      { label: "Present Office Bearers", href: "/office-bearers" },
-      { label: "Executive Committee", href: "/office-bearers/executive-committee" },
-      { label: "Committees", href: "/office-bearers/committees" },
-      { label: "District Chapters", href: "/office-bearers/district-chapters" },
-      { label: "Past Presidents", href: "/office-bearers/past-presidents" },
-    ],
-  },
+  { label: "About Us", href: "/about" },
+  { label: "Office Bearers", href: "/office-bearers" },
   {
     label: "Disciplines",
     href: "/disciplines",
@@ -181,23 +161,12 @@ export default function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden lg:flex items-center gap-4 shrink-0">
-          <Link
-            href="/member-login"
-            className={cn(
-              "text-[10px] tracking-[0.14em] uppercase font-medium transition-colors duration-200",
-              dark
-                ? "text-white/75 hover:text-[#C9A84C]"
-                : "text-[#0B1C2D] hover:text-[#C9A84C]"
-            )}
-          >
-            Member Login
-          </Link>
-          <Link
-            href="/membership"
+          <a
+            href="mailto:secretariat@kea.org.in"
             className="px-5 py-2.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-[#b8963e] transition-colors duration-200"
           >
             Join KEA
-          </Link>
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -293,20 +262,13 @@ export default function Navbar() {
                 </div>
               ))}
               <div className="p-6 flex flex-col gap-3">
-                <Link
-                  href="/member-login"
-                  className="text-center py-3.5 text-[10px] tracking-[0.14em] uppercase text-[#0B1C2D] border border-[#EDEAE3] hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  Member Login
-                </Link>
-                <Link
-                  href="/membership"
+                <a
+                  href="mailto:secretariat@kea.org.in"
                   className="text-center py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-[#b8963e] transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   Join KEA
-                </Link>
+                </a>
               </div>
             </div>
           </motion.div>
