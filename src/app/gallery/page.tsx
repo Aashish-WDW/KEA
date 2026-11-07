@@ -48,7 +48,7 @@ function Lightbox({ index, onClose, onPrev, onNext }: { index: number; onClose: 
 
       {/* Prev */}
       <button
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-[#C9A84C] text-4xl z-10 px-3"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-[#FA712A] text-4xl z-10 px-3"
         onClick={(e) => { e.stopPropagation(); onPrev(); }}
       >‹</button>
 
@@ -62,12 +62,12 @@ function Lightbox({ index, onClose, onPrev, onNext }: { index: number; onClose: 
 
       {/* Next */}
       <button
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-[#C9A84C] text-4xl z-10 px-3"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white/50 hover:text-[#FA712A] text-4xl z-10 px-3"
         onClick={(e) => { e.stopPropagation(); onNext(); }}
       >›</button>
 
       {/* Counter */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/30 text-[11px] tracking-[0.2em] uppercase">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 text-white/30 font-heading text-[14px] tracking-[0.06em] uppercase">
         {index + 1} / {images.length}
       </div>
     </div>
@@ -89,15 +89,15 @@ export default function GalleryPage() {
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "Gallery" }]}
     >
       {/* Intro strip */}
-      <section className="bg-white py-10 border-b border-[#EDEAE3]">
+      <section className="bg-white py-10 border-b border-[#DCD6CB]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[#6B7280] text-sm">A visual record of KEA's competitions and the equestrian community across Karnataka.</p>
-          <span className="shrink-0 text-[10px] tracking-[0.14em] uppercase text-[#9CA3AF]">{images.length} photographs</span>
+          <p className="text-[#6E6155] text-sm">A visual record of KEA's competitions and the equestrian community across Karnataka.</p>
+          <span className="shrink-0 font-heading text-[14px] tracking-[0.06em] uppercase text-[#9A8C7C]">{images.length} photographs</span>
         </div>
       </section>
 
       {/* Grid */}
-      <section className="bg-[#F7F4EF] py-16">
+      <section className="bg-[#EDECE8] py-16">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {images.map((src, i) => (
@@ -111,7 +111,7 @@ export default function GalleryPage() {
                     alt={`KEA Competition 2026 — ${i + 1}`}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-[#0B1C2D]/0 group-hover:bg-[#0B1C2D]/40 transition-colors duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-[#1D150C]/0 group-hover:bg-[#1D150C]/40 transition-colors duration-300 flex items-center justify-center">
                     <span className="text-white/0 group-hover:text-white/80 text-2xl transition-all duration-300 select-none">⊕</span>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Submit photos CTA */}
-      <section className="relative bg-[#0B1C2D] py-14 overflow-hidden">
+      <section className="relative bg-[#1D150C] py-14 overflow-hidden">
         <AnimatedGridPattern className="opacity-30 pointer-events-none" numSquares={10} maxOpacity={0.05} />
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
           <BlurFade delay={0.1} inView>
@@ -135,7 +135,7 @@ export default function GalleryPage() {
           </BlurFade>
           <button
             onClick={() => window.location.href = "mailto:secretariat@kea.org.in"}
-            className="shrink-0 px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors"
+            className="shrink-0 px-8 py-3.5 bg-[#B99A3D] text-[#1D150C] font-heading text-[14px] tracking-[0.06em] uppercase font-semibold hover:bg-[#FA712A] transition-colors"
           >
             Submit Photos →
           </button>

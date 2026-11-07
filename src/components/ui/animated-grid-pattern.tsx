@@ -65,7 +65,7 @@ export function AnimatedGridPattern({
               fill="none"
               stroke="currentColor"
               strokeWidth="0.5"
-              className="text-[#C9A84C]/[0.06]"
+              className="text-[#FA712A]/[0.06]"
             />
           </pattern>
         </defs>
@@ -81,7 +81,7 @@ export function AnimatedGridPattern({
               width={width - 2}
               height={height - 2}
               fill="currentColor"
-              className="text-[#C9A84C]"
+              className="text-[#FA712A]"
               style={{
                 opacity: 0,
                 animation: `grid-fade ${duration}s ease-in-out infinite`,

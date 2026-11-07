@@ -109,20 +109,20 @@ export default function BylawsPage() {
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "About Us", href: "/about" }, { label: "Bylaws" }]}
     >
       {/* Preamble */}
-      <section className="bg-[#F7F4EF] py-20 lg:py-28">
+      <section className="bg-[#EDECE8] py-20 lg:py-28">
         <div className="max-w-5xl mx-auto px-6">
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-[#C9A84C]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Preamble</span>
+              <div className="h-px w-8 bg-[#B99A3D]" />
+              <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] font-medium">Preamble</span>
             </div>
           </BlurFade>
           <BlurFade delay={0.15} inView>
-            <div className="bg-white border border-[#EDEAE3] border-l-2 border-l-[#C9A84C] p-8 mb-12">
-              <p className="font-heading text-xl italic text-[#0B1C2D] leading-relaxed mb-4 font-light">
+            <div className="bg-white border border-[#DCD6CB] border-l-2 border-l-[#FA712A] p-8 mb-12">
+              <p className="font-heading text-xl italic text-[#1D150C] leading-relaxed mb-4 font-light">
                 These Bylaws constitute the governing rules of the Karnataka Equestrian Association and are binding on all members, office bearers, committees, and affiliated entities.
               </p>
-              <p className="text-[#6B7280] text-sm leading-relaxed">
+              <p className="text-[#6E6155] text-sm leading-relaxed">
                 The Association operates under the framework of the Equestrian Federation of India (EFI) and the Karnataka Olympic Association (KOA). In the event of any conflict between these Bylaws and the regulations of EFI or KOA, the latter shall prevail.
               </p>
             </div>
@@ -135,10 +135,10 @@ export default function BylawsPage() {
                 <a
                   key={a.num}
                   href={`#article-${a.num}`}
-                  className="flex items-center gap-3 px-4 py-3 bg-white border border-[#EDEAE3] hover:border-[#C9A84C]/40 hover:text-[#C9A84C] transition-all group text-[11px]"
+                  className="flex items-center gap-3 px-4 py-3 bg-white border border-[#DCD6CB] hover:border-[#FA712A]/40 hover:text-[#FA712A] transition-all group text-[11px]"
                 >
-                  <span className="font-heading text-lg text-[#C9A84C]/40 font-light group-hover:text-[#C9A84C] transition-colors">{a.num}</span>
-                  <span className="text-[#0B1C2D] group-hover:text-[#C9A84C] transition-colors">{a.title}</span>
+                  <span className="font-heading text-lg text-[#FA712A]/40 font-light group-hover:text-[#FA712A] transition-colors">{a.num}</span>
+                  <span className="text-[#1D150C] group-hover:text-[#FA712A] transition-colors">{a.title}</span>
                 </a>
               ))}
             </div>
@@ -148,19 +148,19 @@ export default function BylawsPage() {
           <div className="space-y-12">
             {articles.map((article, idx) => (
               <BlurFade key={article.num} delay={0.1} inView>
-                <MagicCard className="bg-white border border-[#EDEAE3]" gradientColor="rgba(201,168,76,0.06)">
+                <MagicCard className="bg-white border border-[#DCD6CB]" gradientColor="rgba(250,113,42,0.06)">
                   <div id={`article-${article.num}`} className="p-8 relative z-10">
                     <div className="flex items-start gap-6 mb-6">
-                      <span className="font-heading text-4xl text-[#C9A84C]/20 font-light leading-none shrink-0">{article.num}</span>
+                      <span className="font-heading text-4xl text-[#FA712A]/20 font-light leading-none shrink-0">{article.num}</span>
                       <div>
-                        <div className="text-[10px] tracking-[0.14em] uppercase text-[#C9A84C] mb-1">Article {article.num}</div>
-                        <h3 className="font-heading text-xl font-medium text-[#0B1C2D]">{article.title}</h3>
+                        <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] mb-1">Article {article.num}</div>
+                        <h3 className="font-heading text-xl font-medium text-[#1D150C]">{article.title}</h3>
                       </div>
                     </div>
                     <AnimatedList className="space-y-3 ml-0" delay={0.05} stagger={0.06}>
                       {article.clauses.map((clause, i) => (
-                        <div key={i} className="flex gap-4 text-sm text-[#4A5568] leading-relaxed">
-                          <span className="text-[#C9A84C]/50 shrink-0 text-xs mt-0.5 font-medium">{article.num}.{i + 1}</span>
+                        <div key={i} className="flex gap-4 text-sm text-[#4E4136] leading-relaxed">
+                          <span className="text-[#FA712A]/50 shrink-0 text-xs mt-0.5 font-medium">{article.num}.{i + 1}</span>
                           <span>{clause}</span>
                         </div>
                       ))}
@@ -173,10 +173,10 @@ export default function BylawsPage() {
 
           {/* Footer note */}
           <FadeText delay={0.1} inView>
-            <div className="mt-10 bg-[#0B1C2D] p-6">
+            <div className="mt-10 bg-[#1D150C] p-6">
               <p className="text-white/45 text-[12px] leading-relaxed">
                 These Bylaws were adopted by the General Body of the Karnataka Equestrian Association. For certified copies or queries regarding these Bylaws, contact the Secretariat at{" "}
-                <span className="text-[#C9A84C]/70">secretariat@kea.org.in</span>
+                <span className="text-[#FA712A]/70">secretariat@kea.org.in</span>
               </p>
             </div>
           </FadeText>

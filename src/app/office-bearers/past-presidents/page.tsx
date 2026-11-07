@@ -95,10 +95,10 @@ export default function PastPresidentsPage() {
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "Office Bearers", href: "/office-bearers" }, { label: "Past Presidents" }]}
     >
       {/* Intro */}
-      <section className="bg-[#F7F4EF] py-14 border-b border-[#EDEAE3]">
+      <section className="bg-[#EDECE8] py-14 border-b border-[#DCD6CB]">
         <div className="max-w-7xl mx-auto px-6">
           <FadeText delay={0.1} inView>
-            <p className="text-[#4A5568] text-sm leading-relaxed max-w-3xl">
+            <p className="text-[#4E4136] text-sm leading-relaxed max-w-3xl">
               Since its founding in 2004, the Karnataka Equestrian Association has been led by distinguished presidents who have shaped equestrian sport in the state. This page records their terms and the milestones achieved under their leadership.
             </p>
           </FadeText>
@@ -106,19 +106,19 @@ export default function PastPresidentsPage() {
       </section>
 
       {/* Presidents timeline */}
-      <section className="bg-[#F7F4EF] pb-20 lg:pb-28">
+      <section className="bg-[#EDECE8] pb-20 lg:pb-28">
         <div className="max-w-5xl mx-auto px-6 pt-12">
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-10">
-              <div className="h-px w-8 bg-[#C9A84C]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Presidential History</span>
+              <div className="h-px w-8 bg-[#B99A3D]" />
+              <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] font-medium">Presidential History</span>
             </div>
           </BlurFade>
 
           {/* Timeline */}
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-[88px] top-0 bottom-0 w-px bg-[#EDEAE3]" />
+            <div className="absolute left-[88px] top-0 bottom-0 w-px bg-[#DCD6CB]" />
 
             <div className="space-y-0">
               {presidents.map((p, i) => (
@@ -126,33 +126,33 @@ export default function PastPresidentsPage() {
                   <div key={p.name} className="relative flex gap-8 group">
                     {/* Term label */}
                     <div className="w-[88px] shrink-0 pt-7 text-right">
-                      <span className="text-[11px] text-[#9CA3AF] leading-none">{p.term}</span>
+                      <span className="text-[11px] text-[#9A8C7C] leading-none">{p.term}</span>
                     </div>
 
                     {/* Dot */}
                     <div className="relative shrink-0 w-0">
-                      <div className="absolute top-8 -translate-x-1/2 w-3 h-3 rounded-full border-2 border-[#C9A84C] bg-[#F7F4EF] group-hover:bg-[#C9A84C] transition-colors z-10" />
+                      <div className="absolute top-8 -translate-x-1/2 w-3 h-3 rounded-full border-2 border-[#FA712A] bg-[#EDECE8] group-hover:bg-[#B99A3D] transition-colors z-10" />
                     </div>
 
                     {/* Card */}
                     <div className={`flex-1 ml-6 pb-6 ${i < presidents.length - 1 ? "" : ""}`}>
-                      <div className="bg-white border border-[#EDEAE3] group-hover:border-[#C9A84C]/30 transition-all duration-200 p-7">
+                      <div className="bg-white border border-[#DCD6CB] group-hover:border-[#FA712A]/30 transition-all duration-200 p-7">
                         <div className="flex items-start gap-5">
-                          <div className="w-12 h-12 rounded-full bg-[#F7F4EF] border-2 border-[#EDEAE3] group-hover:border-[#C9A84C]/40 transition-colors flex items-center justify-center shrink-0">
-                            <span className="font-heading text-sm font-medium text-[#0B1C2D]">{p.initials}</span>
+                          <div className="w-12 h-12 rounded-full bg-[#EDECE8] border-2 border-[#DCD6CB] group-hover:border-[#FA712A]/40 transition-colors flex items-center justify-center shrink-0">
+                            <span className="font-heading text-sm font-medium text-[#1D150C]">{p.initials}</span>
                           </div>
                           <div className="flex-1">
                             <div className="flex flex-wrap items-center gap-3 mb-1">
-                              <h3 className="font-heading text-base font-medium text-[#0B1C2D]">{p.name}</h3>
+                              <h3 className="font-heading text-base font-medium text-[#1D150C]">{p.name}</h3>
                               {i === 0 && (
-                                <span className="text-[9px] tracking-[0.1em] uppercase px-2 py-0.5 bg-[#0B1C2D] text-[#C9A84C]">Immediate Past</span>
+                                <span className="font-heading text-[13px] tracking-[0.06em] uppercase px-2 py-0.5 border border-[#A54D25]/35 text-[#A54D25] bg-[#A54D25]/[0.06]">Immediate Past</span>
                               )}
                               {i === presidents.length - 1 && (
-                                <span className="text-[9px] tracking-[0.1em] uppercase px-2 py-0.5 border border-[#C9A84C]/40 text-[#C9A84C]">Founding President</span>
+                                <span className="font-heading text-[13px] tracking-[0.06em] uppercase px-2 py-0.5 border border-[#FA712A]/40 text-[#FA712A]">Founding President</span>
                               )}
                             </div>
-                            <div className="text-[10px] tracking-[0.1em] uppercase text-[#C9A84C] mb-3">President · {p.tenure}</div>
-                            <p className="text-[#6B7280] text-[12px] leading-relaxed">{p.highlight}</p>
+                            <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] mb-3">President · {p.tenure}</div>
+                            <p className="text-[#6E6155] text-[12px] leading-relaxed">{p.highlight}</p>
                           </div>
                         </div>
                       </div>
@@ -170,23 +170,23 @@ export default function PastPresidentsPage() {
         <div className="max-w-5xl mx-auto px-6">
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-[#C9A84C]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Secretaries General</span>
+              <div className="h-px w-8 bg-[#B99A3D]" />
+              <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] font-medium">Secretaries General</span>
             </div>
-            <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-12">Past <span className="italic">Secretaries General</span></h2>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-[#1D150C] mb-12">Past <span className="italic">Secretaries General</span></h2>
           </BlurFade>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {secretaries.map((s, i) => (
               <BlurFade key={s.name} delay={0.1 + i * 0.06} inView>
-                <MagicCard className="border border-[#EDEAE3] hover:border-[#C9A84C]/30 transition-colors p-0 group">
+                <MagicCard className="border border-[#DCD6CB] hover:border-[#FA712A]/30 transition-colors p-0 group">
                   <div className="p-6 flex items-center gap-4 relative z-10">
-                    <div className="w-11 h-11 rounded-full bg-[#F7F4EF] border-2 border-[#EDEAE3] group-hover:border-[#C9A84C]/40 transition-colors flex items-center justify-center shrink-0">
-                      <span className="font-heading text-xs font-medium text-[#0B1C2D]">{s.initials}</span>
+                    <div className="w-11 h-11 rounded-full bg-[#EDECE8] border-2 border-[#DCD6CB] group-hover:border-[#FA712A]/40 transition-colors flex items-center justify-center shrink-0">
+                      <span className="font-heading text-xs font-medium text-[#1D150C]">{s.initials}</span>
                     </div>
                     <div>
-                      <div className="font-medium text-[#0B1C2D] text-sm">{s.name}</div>
-                      <div className="text-[10px] text-[#C9A84C] tracking-[0.1em] mt-0.5">{s.term}</div>
+                      <div className="font-medium text-[#1D150C] text-sm">{s.name}</div>
+                      <div className="text-[10px] text-[#FA712A] tracking-[0.1em] mt-0.5">{s.term}</div>
                     </div>
                   </div>
                 </MagicCard>
@@ -197,13 +197,13 @@ export default function PastPresidentsPage() {
       </section>
 
       {/* Note */}
-      <section className="relative bg-[#0B1C2D] py-14 overflow-hidden">
+      <section className="relative bg-[#1D150C] py-14 overflow-hidden">
         <AnimatedGridPattern className="opacity-30" numSquares={8} maxOpacity={0.05} />
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <FadeText delay={0.1} inView>
             <p className="text-white/45 text-[12px] leading-relaxed max-w-2xl">
               For information on KEA's full administrative history or earlier records, please contact the Secretariat at{" "}
-              <span className="text-[#C9A84C]/70">secretariat@kea.org.in</span>
+              <span className="text-[#FA712A]/70">secretariat@kea.org.in</span>
             </p>
           </FadeText>
         </div>

@@ -16,7 +16,7 @@ interface BoxRevealProps {
 export function BoxReveal({
   children,
   width = "fit-content",
-  boxColor = "#C9A84C",
+  boxColor = "#FA712A",
   duration = 0.5,
   delay = 0,
   className,

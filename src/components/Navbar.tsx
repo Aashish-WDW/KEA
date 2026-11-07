@@ -65,33 +65,31 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handler);
   }, [isHome]);
 
-  const dark = !scrolled; // white text on transparent (hero) bg
+  const dark = true; // Soon-style: the bar is always dark, so text stays light
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled
-          ? "bg-white/96 backdrop-blur-sm shadow-[0_1px_24px_rgba(0,0,0,0.07)] border-b border-[#EDEAE3]"
+        (scrolled || mobileOpen)
+          ? "bg-[#1D150C]/[0.86] backdrop-blur-md shadow-[0_10px_30px_-8px_rgba(0,0,0,0.55)]"
           : "bg-transparent"
       )}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-20">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 shrink-0">
-          <div className="w-14 h-14 rounded-full border-2 border-[#C9A84C]/70 flex items-center justify-center overflow-hidden">
-            <img src="/logo.png" alt="KEA Logo" className="w-11 h-11 object-contain" />
-          </div>
+          <img src="/logo.png" alt="KEA Logo" className="h-[42px] w-auto object-contain" />
           <div className="hidden sm:block">
             <div
               className={cn(
-                "font-heading text-[14px] font-semibold tracking-wide leading-none transition-colors duration-300",
-                dark ? "text-white" : "text-[#0B1C2D]"
+                "font-heading text-[15px] tracking-[0.06em] uppercase leading-[1.15] transition-colors duration-300",
+                dark ? "text-white" : "text-[#1D150C]"
               )}
             >
               Karnataka Equestrian
             </div>
-            <div className="text-[10px] tracking-[0.18em] uppercase text-[#C9A84C]/80 mt-1">
+            <div className="font-heading text-[15px] tracking-[0.06em] uppercase leading-[1.15] text-[#EDECE8]">
               Association
             </div>
           </div>
@@ -104,32 +102,32 @@ export default function Navbar() {
               <div key={item.label} className="group relative">
                 <button
                   className={cn(
-                    "relative flex items-center gap-0.5 px-3 py-2 text-[10px] tracking-[0.14em] uppercase font-medium transition-colors duration-200",
+                    "relative flex items-center gap-1 px-2.5 xl:px-3 py-2 font-heading text-[13px] xl:text-[14px] tracking-[0.05em] uppercase transition-colors duration-200",
                     dark
-                      ? "text-white/85 hover:text-[#C9A84C]"
-                      : "text-[#0B1C2D] hover:text-[#C9A84C]",
-                    isActive(pathname, item) && (dark ? "text-[#C9A84C]" : "text-[#C9A84C]")
+                      ? "text-[#EDECE8]/75 hover:text-[#EDECE8]"
+                      : "text-[#1D150C] hover:text-[#FA712A]",
+                    isActive(pathname, item) && "text-[#EDECE8]"
                   )}
                 >
                   {item.label}
                   <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
                   {/* Active indicator */}
                   {isActive(pathname, item) && (
-                    <span className="absolute -bottom-0.5 left-3 right-3 h-[2px] bg-[#C9A84C] rounded-full" />
+                    <span className="absolute -bottom-0.5 left-3 right-3 h-px bg-[#FA712A]" />
                   )}
                 </button>
                 {/* Dropdown */}
                 <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 min-w-[220px]">
-                  <div className="bg-white shadow-[0_8px_30px_rgba(0,0,0,0.10)] border border-[#EDEAE3] py-2">
+                  <div className="bg-[#1D150C] shadow-[0_18px_30px_-10px_rgba(0,0,0,0.6)] border border-[#EDECE8]/15 py-2">
                     {item.children.map((child) => (
                       <Link
                         key={child.href}
                         href={child.href}
                         className={cn(
-                          "block px-5 py-2.5 text-[10px] tracking-[0.08em] uppercase transition-colors",
+                          "block px-5 py-3 font-heading text-[13px] tracking-[0.05em] uppercase transition-colors",
                           pathname === child.href
-                            ? "text-[#C9A84C] bg-[#F7F4EF] font-semibold"
-                            : "text-[#374151] hover:text-[#C9A84C] hover:bg-[#F7F4EF]"
+                            ? "text-[#FA712A] bg-[#FA712A]/[0.08]"
+                            : "text-[#EDECE8]/75 hover:text-[#EDECE8] hover:bg-[#FA712A]/[0.08]"
                         )}
                       >
                         {child.label}
@@ -143,16 +141,16 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "relative px-3 py-2 text-[10px] tracking-[0.14em] uppercase font-medium transition-colors duration-200",
+                  "relative px-2.5 xl:px-3 py-2 font-heading text-[13px] xl:text-[14px] tracking-[0.05em] uppercase transition-colors duration-200",
                   dark
-                    ? "text-white/85 hover:text-[#C9A84C]"
-                    : "text-[#0B1C2D] hover:text-[#C9A84C]",
-                  isActive(pathname, item) && "text-[#C9A84C]"
+                    ? "text-[#EDECE8]/75 hover:text-[#EDECE8]"
+                    : "text-[#1D150C] hover:text-[#FA712A]",
+                  isActive(pathname, item) && "text-[#EDECE8]"
                 )}
               >
                 {item.label}
                 {isActive(pathname, item) && (
-                  <span className="absolute -bottom-0.5 left-3 right-3 h-[2px] bg-[#C9A84C] rounded-full" />
+                  <span className="absolute -bottom-0.5 left-3 right-3 h-px bg-[#FA712A]" />
                 )}
               </Link>
             )
@@ -163,7 +161,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-4 shrink-0">
           <a
             href="mailto:secretariat@kea.org.in"
-            className="px-5 py-2.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-[#b8963e] transition-colors duration-200"
+            className="px-5 py-3 bg-[#B99A3D] text-[#1D150C] font-heading text-[14px] tracking-[0.05em] uppercase rounded-[2px] hover:bg-[#FA712A] hover:-translate-y-0.5 transition-all duration-200"
           >
             Join KEA
           </a>
@@ -176,9 +174,9 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           {mobileOpen ? (
-            <X className={cn("w-5 h-5", dark ? "text-white" : "text-[#0B1C2D]")} />
+            <X className={cn("w-5 h-5", dark ? "text-white" : "text-[#1D150C]")} />
           ) : (
-            <Menu className={cn("w-5 h-5", dark ? "text-white" : "text-[#0B1C2D]")} />
+            <Menu className={cn("w-5 h-5", dark ? "text-white" : "text-[#1D150C]")} />
           )}
         </button>
       </div>
@@ -191,7 +189,7 @@ export default function Navbar() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="lg:hidden bg-white border-t border-[#EDEAE3] overflow-hidden"
+            className="lg:hidden bg-[#1D150C] border-t border-[#EDECE8]/15 shadow-[0_18px_30px_-10px_rgba(0,0,0,0.6)] overflow-hidden"
           >
             <div className="max-h-[80vh] overflow-y-auto">
               {navLinks.map((item) => (
@@ -200,8 +198,8 @@ export default function Navbar() {
                     <div>
                       <button
                         className={cn(
-                          "w-full flex items-center justify-between px-6 py-4 text-[10px] tracking-[0.14em] uppercase font-medium border-b border-[#EDEAE3]",
-                          isActive(pathname, item) ? "text-[#C9A84C]" : "text-[#0B1C2D]"
+                          "w-full flex items-center justify-between px-6 py-4 font-heading text-[14px] tracking-[0.05em] uppercase border-b border-[#EDECE8]/15",
+                          isActive(pathname, item) ? "text-[#FA712A]" : "text-[#EDECE8]"
                         )}
                         onClick={() =>
                           setOpenDropdown(
@@ -224,17 +222,17 @@ export default function Navbar() {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="bg-[#F7F4EF] overflow-hidden"
+                            className="bg-[#140E08] overflow-hidden"
                           >
                             {item.children.map((child) => (
                               <Link
                                 key={child.href}
                                 href={child.href}
                                 className={cn(
-                                  "block px-8 py-3 text-[10px] tracking-[0.1em] uppercase border-b border-[#EDEAE3]/60 transition-colors",
+                                  "block px-8 py-3 font-heading text-[13px] tracking-[0.05em] uppercase border-b border-[#EDECE8]/10 transition-colors",
                                   pathname === child.href
-                                    ? "text-[#C9A84C] font-semibold"
-                                    : "text-[#6B7280] hover:text-[#C9A84C]"
+                                    ? "text-[#FA712A] font-semibold"
+                                    : "text-[#EDECE8]/70 hover:text-[#FA712A]"
                                 )}
                                 onClick={() => setMobileOpen(false)}
                               >
@@ -249,10 +247,10 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={cn(
-                        "block px-6 py-4 text-[10px] tracking-[0.14em] uppercase font-medium border-b border-[#EDEAE3] transition-colors",
+                        "block px-6 py-4 font-heading text-[14px] tracking-[0.05em] uppercase border-b border-[#EDECE8]/15 transition-colors",
                         isActive(pathname, item)
-                          ? "text-[#C9A84C]"
-                          : "text-[#0B1C2D] hover:text-[#C9A84C]"
+                          ? "text-[#FA712A]"
+                          : "text-[#EDECE8] hover:text-[#FA712A]"
                       )}
                       onClick={() => setMobileOpen(false)}
                     >
@@ -264,7 +262,7 @@ export default function Navbar() {
               <div className="p-6 flex flex-col gap-3">
                 <a
                   href="mailto:secretariat@kea.org.in"
-                  className="text-center py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-[#b8963e] transition-colors"
+                  className="text-center py-4 bg-[#B99A3D] text-[#1D150C] font-heading text-[15px] tracking-[0.05em] uppercase rounded-[2px] hover:bg-[#FA712A] transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >
                   Join KEA

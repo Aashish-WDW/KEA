@@ -98,34 +98,34 @@ export default function MembershipPage() {
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "Membership" }]}
     >
       {/* Intro */}
-      <section className="bg-[#F7F4EF] py-20 lg:py-28">
+      <section className="bg-[#EDECE8] py-20 lg:py-28">
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <BlurFade delay={0.1} inView>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-px w-8 bg-[#C9A84C]" />
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Why Join</span>
+                <div className="h-px w-8 bg-[#B99A3D]" />
+                <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] font-medium">Why Join</span>
               </div>
             </BlurFade>
             <BoxReveal delay={0.15}>
-              <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] leading-snug mb-6">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-[#1D150C] leading-snug mb-6">
                 Be Part of Karnataka's<br /><span className="italic">Equestrian Community</span>
               </h2>
             </BoxReveal>
             <FadeText delay={0.3} inView>
-              <p className="text-[#4A5568] text-sm leading-relaxed mb-5">
+              <p className="text-[#4E4136] text-sm leading-relaxed mb-5">
                 KEA membership connects you to the full spectrum of equestrian sport in Karnataka — from local club events to national EFI championships. As a member, you gain access to competition pathways, technical resources, and a community of fellow equestrians.
               </p>
             </FadeText>
             <FadeText delay={0.4} inView>
-              <p className="text-[#4A5568] text-sm leading-relaxed">
+              <p className="text-[#4E4136] text-sm leading-relaxed">
                 All competition eligibility under KEA requires current KEA membership. EFI rider registration — required for national-level competition — is facilitated through KEA for all members.
               </p>
             </FadeText>
           </div>
 
           <BlurFade delay={0.2} inView>
-            <div className="relative group overflow-hidden border border-[#EDEAE3] shadow-2xl">
+            <div className="relative group overflow-hidden border border-[#DCD6CB] shadow-2xl">
               {/* Community Image Background */}
               <div className="absolute inset-0 z-0">
                 <img 
@@ -133,10 +133,10 @@ export default function MembershipPage() {
                   alt="KEA Community" 
                   className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-[#0B1C2D]/60 group-hover:bg-[#0B1C2D]/20 transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#1D150C]/60 group-hover:bg-[#1D150C]/20 transition-colors duration-500" />
               </div>
 
-              <div className="relative z-10 grid grid-cols-2 gap-px bg-[#C9A84C]/10 h-full">
+              <div className="relative z-10 grid grid-cols-2 gap-px bg-[#FA712A]/10 h-full">
                 {[
                   { num: 100, suffix: "+", label: "Active Members" },
                   { num: 5, suffix: "", label: "Disciplines" },
@@ -144,10 +144,10 @@ export default function MembershipPage() {
                   { num: 10, suffix: "+", label: "Years of Service" },
                 ].map((s) => (
                   <div key={s.label} className="p-10 text-center backdrop-blur-[2px] bg-white/5 hover:bg-white/10 transition-colors">
-                    <div className="font-heading text-4xl lg:text-5xl font-light text-white mb-2 shadow-sm">
+                    <div className="font-heading text-4xl md:text-5xl lg:text-6xl font-light text-white mb-2 shadow-sm">
                       <NumberTicker value={s.num} />{s.suffix}
                     </div>
-                    <div className="text-[9px] tracking-[0.18em] uppercase text-[#C9A84C] font-semibold">{s.label}</div>
+                    <div className="font-heading text-[13px] tracking-[0.06em] uppercase text-[#FA712A] font-semibold">{s.label}</div>
                   </div>
                 ))}
               </div>
@@ -161,36 +161,40 @@ export default function MembershipPage() {
         <div className="max-w-7xl mx-auto px-6">
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-[#C9A84C]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Membership Types</span>
+              <div className="h-px w-8 bg-[#B99A3D]" />
+              <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] font-medium">Membership Types</span>
             </div>
-            <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-14">Choose Your <span className="italic">Membership</span></h2>
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-[#1D150C] mb-14">Choose Your <span className="italic">Membership</span></h2>
           </BlurFade>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {types.map((t, i) => (
               <BlurFade key={t.title} delay={0.15 + i * 0.08} inView>
-                <MagicCard className="border border-[#EDEAE3] hover:border-[#C9A84C]/40 hover:shadow-[0_4px_24px_rgba(201,168,76,0.08)] transition-all duration-300 group flex flex-col h-full">
-                  <div className="p-7 border-b border-[#EDEAE3] relative z-10">
-                    <div className="inline-block px-2 py-1 text-[8px] tracking-[0.14em] uppercase bg-[#0B1C2D] text-[#C9A84C] mb-4">{t.tag}</div>
-                    <div className="text-[10px] tracking-[0.14em] uppercase text-[#6B7280] mb-2">{t.title} Member</div>
-                    <div className="font-heading text-4xl font-light text-[#0B1C2D]">{t.fee}</div>
-                    <div className="text-[11px] text-[#9CA3AF] mt-1">{t.period}</div>
+                <MagicCard className="border border-[#DCD6CB] hover:border-[#FA712A]/40 hover:shadow-[0_4px_24px_rgba(250,113,42,0.08)] transition-all duration-300 group flex flex-col h-full">
+                  <div className="p-7 border-b border-[#DCD6CB] relative z-10">
+                    <span className="absolute top-7 right-7 font-heading text-[14px] tracking-[0.04em] text-[#B59972]">0{i + 1}</span>
+                    <div className="flex items-center gap-2.5 mb-6 pr-6">
+                      <span className="h-px w-5 shrink-0 bg-[#A54D25]/70 transition-all duration-300 group-hover:w-10" />
+                      <span className="font-heading text-[13px] tracking-[0.06em] uppercase whitespace-nowrap text-[#A54D25]">{t.tag}</span>
+                    </div>
+                    <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#6E6155] mb-2">{t.title} Member</div>
+                    <div className="font-heading text-4xl font-light text-[#1D150C]">{t.fee}</div>
+                    <div className="text-[11px] text-[#9A8C7C] mt-1">{t.period}</div>
                   </div>
                   <div className="p-7 flex-1 flex flex-col relative z-10">
                     {"note" in t && t.note && (
-                      <p className="mb-3 text-[11px] text-[#C9A84C] leading-relaxed" dangerouslySetInnerHTML={{ __html: t.note }} />
+                      <p className="mb-3 text-[11px] text-[#FA712A] leading-relaxed" dangerouslySetInnerHTML={{ __html: t.note }} />
                     )}
-                    <p className="text-[#6B7280] text-[12px] leading-relaxed mb-5">{t.desc}</p>
+                    <p className="text-[#6E6155] text-[12px] leading-relaxed mb-5">{t.desc}</p>
                     <ul className="space-y-2.5 flex-1">
                       {t.benefits.map((b) => (
-                        <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#4A5568]">
-                          <span className="text-[#C9A84C] text-[8px] mt-1 shrink-0">◇</span>
+                        <li key={b} className="flex items-start gap-2.5 text-[12px] text-[#4E4136]">
+                          <span className="text-[#FA712A] text-[8px] mt-1 shrink-0">◇</span>
                           {b}
                         </li>
                       ))}
                     </ul>
-                    <a href="mailto:secretariat@kea.org.in" className="mt-6 block text-center py-3 bg-[#F7F4EF] border border-[#EDEAE3] text-[#0B1C2D] text-[10px] tracking-[0.14em] uppercase hover:bg-[#C9A84C] hover:text-[#0B1C2D] hover:border-[#C9A84C] transition-colors font-medium">
+                    <a href="mailto:secretariat@kea.org.in" className="mt-6 block text-center py-3 bg-[#EDECE8] border border-[#DCD6CB] text-[#1D150C] font-heading text-[14px] tracking-[0.06em] uppercase hover:bg-[#B99A3D] hover:text-[#1D150C] hover:border-[#FA712A] transition-colors font-medium">
                       Apply Now
                     </a>
                   </div>
@@ -202,21 +206,21 @@ export default function MembershipPage() {
       </section>
 
       {/* How to apply */}
-      <section className="relative bg-[#0B1C2D] py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-[#1D150C] py-20 lg:py-28 overflow-hidden">
         <AnimatedGridPattern className="opacity-30" numSquares={18} maxOpacity={0.06} />
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 relative z-10">
           <div>
             <BlurFade delay={0.1} inView>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-px w-8 bg-[#C9A84C]/50" />
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C]/70 font-medium">Application Process</span>
+                <div className="h-px w-8 bg-[#FA712A]/50" />
+                <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A]/70 font-medium">Application Process</span>
               </div>
-              <h2 className="font-heading text-3xl lg:text-4xl font-light text-white mb-10">How to <span className="italic">Apply</span></h2>
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-white mb-10">How to <span className="italic">Apply</span></h2>
             </BlurFade>
             <AnimatedList className="space-y-6" delay={0.15} stagger={0.1}>
               {steps.map((s) => (
                 <div key={s.num} className="flex gap-5 group">
-                  <span className="font-heading text-3xl text-[#C9A84C]/25 font-light leading-none shrink-0 w-8">{s.num}</span>
+                  <span className="font-heading text-3xl text-[#FA712A]/25 font-light leading-none shrink-0 w-8">{s.num}</span>
                   <div>
                     <div className="text-white/80 text-sm font-medium mb-1">{s.title}</div>
                     <p className="text-white/45 text-[13px] leading-relaxed">{s.desc}</p>
@@ -229,25 +233,25 @@ export default function MembershipPage() {
           <div>
             <BlurFade delay={0.15} inView>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-px w-8 bg-[#C9A84C]/50" />
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C]/70 font-medium">Required Documents</span>
+                <div className="h-px w-8 bg-[#FA712A]/50" />
+                <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A]/70 font-medium">Required Documents</span>
               </div>
-              <h2 className="font-heading text-3xl lg:text-4xl font-light text-white mb-10">What to <span className="italic">Bring</span></h2>
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-white mb-10">What to <span className="italic">Bring</span></h2>
             </BlurFade>
             <AnimatedList className="space-y-4 mb-10" delay={0.2} stagger={0.08}>
               {documents.map((d, i) => (
                 <div key={i} className="flex items-start gap-3 text-[13px] text-white/55">
-                  <span className="text-[#C9A84C] text-[9px] mt-1 shrink-0">◇</span>
+                  <span className="text-[#FA712A] text-[9px] mt-1 shrink-0">◇</span>
                   {d}
                 </div>
               ))}
             </AnimatedList>
             <BlurFade delay={0.5} inView>
-              <div className="border border-[#C9A84C]/20 p-6">
+              <div className="border border-[#FA712A]/20 p-6">
                 <p className="text-white/45 text-[12px] leading-relaxed">
                   For queries about the application process, contact the KEA Secretariat at{" "}
-                  <span className="text-[#C9A84C]/70">secretariat@kea.org.in</span> or call us at{" "}
-                  <span className="text-[#C9A84C]/70">+91 80 0000 0000</span>.
+                  <span className="text-[#FA712A]/70">secretariat@kea.org.in</span> or call us at{" "}
+                  <span className="text-[#FA712A]/70">+91 80 0000 0000</span>.
                 </p>
               </div>
             </BlurFade>

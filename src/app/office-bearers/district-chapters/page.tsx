@@ -106,11 +106,11 @@ const chapters = [
 ];
 
 const disciplineColors: Record<string, string> = {
-  Dressage: "bg-blue-50 text-blue-700",
-  "Show Jumping": "bg-amber-50 text-amber-700",
-  Eventing: "bg-purple-50 text-purple-700",
-  "Tent Pegging": "bg-red-50 text-red-700",
-  Endurance: "bg-emerald-50 text-emerald-700",
+  Dressage: "bg-[#A54D25]/12 text-[#A54D25]",
+  "Show Jumping": "bg-[#B99A3D]/15 text-[#7A6420]",
+  Eventing: "bg-[#1D150C]/8 text-[#1D150C]",
+  "Tent Pegging": "bg-[#D9602A]/12 text-[#B2461A]",
+  Endurance: "bg-[#B59972]/20 text-[#5E4A2E]",
 };
 
 export default function DistrictChaptersPage() {
@@ -123,7 +123,7 @@ export default function DistrictChaptersPage() {
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "Office Bearers", href: "/office-bearers" }, { label: "District Chapters" }]}
     >
       {/* Stats strip */}
-      <section className="bg-white py-10 border-b border-[#EDEAE3]">
+      <section className="bg-white py-10 border-b border-[#DCD6CB]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
             {[
@@ -134,8 +134,8 @@ export default function DistrictChaptersPage() {
             ].map((stat, i) => (
               <BlurFade key={stat.label} delay={0.1 + i * 0.08} inView>
                 <div className="text-center">
-                  <div className="font-heading text-3xl font-light text-[#C9A84C] mb-1">{stat.value}</div>
-                  <div className="text-[10px] tracking-[0.14em] uppercase text-[#9CA3AF]">{stat.label}</div>
+                  <div className="font-heading text-3xl font-light text-[#FA712A] mb-1">{stat.value}</div>
+                  <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#9A8C7C]">{stat.label}</div>
                 </div>
               </BlurFade>
             ))}
@@ -144,10 +144,10 @@ export default function DistrictChaptersPage() {
       </section>
 
       {/* Intro */}
-      <section className="bg-[#F7F4EF] py-14 border-b border-[#EDEAE3]">
+      <section className="bg-[#EDECE8] py-14 border-b border-[#DCD6CB]">
         <div className="max-w-7xl mx-auto px-6">
           <FadeText delay={0.1} inView>
-            <p className="text-[#4A5568] text-sm leading-relaxed max-w-3xl">
+            <p className="text-[#4E4136] text-sm leading-relaxed max-w-3xl">
               The Karnataka Equestrian Association operates through district chapters that bring equestrian activities closer to riders across the state. Each chapter is led by a locally elected Chairperson and Secretary, and coordinates directly with KEA for competition scheduling, membership, and infrastructure development.
             </p>
           </FadeText>
@@ -155,24 +155,24 @@ export default function DistrictChaptersPage() {
       </section>
 
       {/* Chapter listings */}
-      <section className="bg-[#F7F4EF] pb-20 lg:pb-28">
+      <section className="bg-[#EDECE8] pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 pt-12">
           <div className="grid lg:grid-cols-2 gap-6">
             {chapters.map((ch, i) => (
               <BlurFade key={ch.code} delay={0.1 + i * 0.06} inView>
-                <MagicCard className="bg-white border border-[#EDEAE3] hover:border-[#C9A84C]/30 transition-all duration-200 overflow-hidden group">
+                <MagicCard className="bg-white border border-[#DCD6CB] hover:border-[#FA712A]/30 transition-all duration-200 overflow-hidden group">
                   {/* Header */}
-                  <div className="flex items-center justify-between px-7 py-5 border-b border-[#EDEAE3]">
+                  <div className="flex items-center justify-between px-7 py-5 border-b border-[#DCD6CB]">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 bg-[#0B1C2D] flex items-center justify-center shrink-0">
-                        <span className="font-heading text-[11px] font-medium text-[#C9A84C] tracking-widest">{ch.code}</span>
+                      <div className="w-12 h-12 bg-[#1D150C] flex items-center justify-center shrink-0">
+                        <span className="font-heading text-[11px] font-medium text-[#FA712A] tracking-widest">{ch.code}</span>
                       </div>
                       <div>
-                        <h3 className="font-heading text-base font-medium text-[#0B1C2D] group-hover:text-[#C9A84C] transition-colors">{ch.district} District</h3>
-                        <div className="text-[11px] text-[#9CA3AF]">{ch.members} members</div>
+                        <h3 className="font-heading text-base font-medium text-[#1D150C] group-hover:text-[#FA712A] transition-colors">{ch.district} District</h3>
+                        <div className="text-[11px] text-[#9A8C7C]">{ch.members} members</div>
                       </div>
                     </div>
-                    <span className={`text-[9px] tracking-[0.12em] uppercase font-medium px-3 py-1 rounded-full ${ch.status === "Active" ? "bg-green-50 text-green-700" : "bg-amber-50 text-amber-700"}`}>
+                    <span className={`font-heading text-[13px] tracking-[0.06em] uppercase font-medium px-3 py-1 rounded-full ${ch.status === "Active" ? "bg-[#FA712A]/15 text-[#A54D25]" : "bg-[#B99A3D]/15 text-[#7A6420]"}`}>
                       {ch.status}
                     </span>
                   </div>
@@ -182,22 +182,22 @@ export default function DistrictChaptersPage() {
                     {/* Leadership */}
                     <div className="grid grid-cols-2 gap-4 mb-5">
                       <div>
-                        <div className="text-[9px] tracking-[0.14em] uppercase text-[#C9A84C] mb-1">Chairperson</div>
-                        <div className="text-sm text-[#0B1C2D] font-medium">{ch.chair}</div>
+                        <div className="font-heading text-[13px] tracking-[0.06em] uppercase text-[#FA712A] mb-1">Chairperson</div>
+                        <div className="text-sm text-[#1D150C] font-medium">{ch.chair}</div>
                       </div>
                       <div>
-                        <div className="text-[9px] tracking-[0.14em] uppercase text-[#C9A84C] mb-1">Secretary</div>
-                        <div className="text-sm text-[#0B1C2D] font-medium">{ch.secretary}</div>
+                        <div className="font-heading text-[13px] tracking-[0.06em] uppercase text-[#FA712A] mb-1">Secretary</div>
+                        <div className="text-sm text-[#1D150C] font-medium">{ch.secretary}</div>
                       </div>
                     </div>
 
                     {/* Venues */}
                     <div className="mb-5">
-                      <div className="text-[9px] tracking-[0.14em] uppercase text-[#C9A84C] mb-2">Venues</div>
+                      <div className="font-heading text-[13px] tracking-[0.06em] uppercase text-[#FA712A] mb-2">Venues</div>
                       <ul className="space-y-1">
                         {ch.venues.map((v) => (
-                          <li key={v} className="text-[12px] text-[#4A5568] flex items-start gap-2">
-                            <span className="text-[#C9A84C]/40 text-[7px] mt-1 shrink-0">◇</span>
+                          <li key={v} className="text-[12px] text-[#4E4136] flex items-start gap-2">
+                            <span className="text-[#FA712A]/40 text-[7px] mt-1 shrink-0">◇</span>
                             {v}
                           </li>
                         ))}
@@ -206,18 +206,18 @@ export default function DistrictChaptersPage() {
 
                     {/* Disciplines */}
                     <div className="mb-5">
-                      <div className="text-[9px] tracking-[0.14em] uppercase text-[#C9A84C] mb-2">Active Disciplines</div>
+                      <div className="font-heading text-[13px] tracking-[0.06em] uppercase text-[#FA712A] mb-2">Active Disciplines</div>
                       <div className="flex flex-wrap gap-1.5">
                         {ch.disciplines.map((d) => (
-                          <span key={d} className={`text-[9px] tracking-[0.08em] uppercase px-2.5 py-1 rounded-full font-medium ${disciplineColors[d] ?? "bg-gray-50 text-gray-700"}`}>{d}</span>
+                          <span key={d} className={`font-heading text-[13px] tracking-[0.06em] uppercase px-2.5 py-1 rounded-full font-medium ${disciplineColors[d] ?? "bg-[#E6E2DA] text-[#3D3329]"}`}>{d}</span>
                         ))}
                       </div>
                     </div>
 
                     {/* Contact */}
-                    <div className="pt-4 border-t border-[#EDEAE3] grid grid-cols-2 gap-3">
-                      <div className="text-[11px] text-[#6B7280]">{ch.phone}</div>
-                      <div className="text-[11px] text-[#6B7280] break-all">{ch.email}</div>
+                    <div className="pt-4 border-t border-[#DCD6CB] grid grid-cols-2 gap-3">
+                      <div className="text-[11px] text-[#6E6155]">{ch.phone}</div>
+                      <div className="text-[11px] text-[#6E6155] break-all">{ch.email}</div>
                     </div>
                   </div>
                 </MagicCard>
@@ -228,7 +228,7 @@ export default function DistrictChaptersPage() {
       </section>
 
       {/* Start a chapter CTA */}
-      <section className="relative bg-[#0B1C2D] py-14 overflow-hidden">
+      <section className="relative bg-[#1D150C] py-14 overflow-hidden">
         <AnimatedGridPattern className="opacity-30" numSquares={10} maxOpacity={0.05} />
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6 relative z-10">
           <BlurFade delay={0.1} inView>
@@ -238,7 +238,7 @@ export default function DistrictChaptersPage() {
             </div>
           </BlurFade>
           <BlurFade delay={0.2} inView>
-            <Link href="/contact" className="shrink-0 px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors">
+            <Link href="/contact" className="shrink-0 px-8 py-3.5 bg-[#B99A3D] text-[#1D150C] font-heading text-[14px] tracking-[0.06em] uppercase font-semibold hover:bg-[#FA712A] transition-colors">
               Contact Secretariat →
             </Link>
           </BlurFade>

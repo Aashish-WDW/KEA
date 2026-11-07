@@ -181,7 +181,7 @@ export default async function DisciplinePage({
       ]}
     >
       {/* Overview */}
-      <section className="relative bg-[#F7F4EF] py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-[#EDECE8] py-20 lg:py-28 overflow-hidden">
         {/* Dynamic Discipline Background */}
         <div className="absolute inset-0 z-0 opacity-10 grayscale brightness-110">
           <img 
@@ -195,26 +195,26 @@ export default async function DisciplinePage({
             alt="" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#F7F4EF] via-transparent to-[#F7F4EF]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#EDECE8] via-transparent to-[#EDECE8]" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start relative z-10">
           <BlurFade delay={0.1} inView>
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="h-px w-8 bg-[#C9A84C]" />
-                <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Overview</span>
+                <div className="h-px w-8 bg-[#B99A3D]" />
+                <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] font-medium">Overview</span>
               </div>
               <BoxReveal delay={0.15}>
-                <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] leading-snug mb-6">
+                <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-[#1D150C] leading-snug mb-6">
                   What is <span className="italic">{discipline.title}?</span>
                 </h2>
               </BoxReveal>
               <FadeText delay={0.25} inView>
-                <p className="text-[#4A5568] text-sm leading-relaxed mb-5">{discipline.overview}</p>
+                <p className="text-[#4E4136] text-sm leading-relaxed mb-5">{discipline.overview}</p>
               </FadeText>
               <FadeText delay={0.35} inView>
-                <p className="text-[#4A5568] text-sm leading-relaxed">{discipline.detail}</p>
+                <p className="text-[#4E4136] text-sm leading-relaxed">{discipline.detail}</p>
               </FadeText>
             </div>
           </BlurFade>
@@ -222,17 +222,17 @@ export default async function DisciplinePage({
           {/* Key facts */}
           <BlurFade delay={0.2} inView>
             <div>
-              <div className="grid grid-cols-2 gap-px bg-[#EDEAE3]">
+              <div className="grid grid-cols-2 gap-px bg-[#DCD6CB]">
                 {discipline.facts.map((f) => (
                   <div key={f.label} className="bg-white p-6">
-                    <div className="text-[10px] tracking-[0.14em] uppercase text-[#C9A84C] mb-2">{f.label}</div>
-                    <div className="font-heading text-lg font-medium text-[#0B1C2D]">{f.value}</div>
+                    <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] mb-2">{f.label}</div>
+                    <div className="font-heading text-lg font-medium text-[#1D150C]">{f.value}</div>
                   </div>
                 ))}
               </div>
 
               {/* Affiliation note */}
-              <div className="mt-6 bg-[#0B1C2D] p-6">
+              <div className="mt-6 bg-[#1D150C] p-6">
                 <p className="text-white/50 text-[12px] leading-relaxed">
                   {discipline.title} in Karnataka is governed by the Karnataka Equestrian Association (KEA), operating under the technical framework of the Equestrian Federation of India (EFI) and the international rules of the FEI.
                 </p>
@@ -247,27 +247,27 @@ export default async function DisciplinePage({
         <div className="max-w-7xl mx-auto px-6">
           <BlurFade delay={0.1} inView>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-[#C9A84C]" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C] font-medium">Competition Format</span>
+              <div className="h-px w-8 bg-[#B99A3D]" />
+              <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] font-medium">Competition Format</span>
             </div>
           </BlurFade>
           <BoxReveal delay={0.15}>
-            <h2 className="font-heading text-3xl lg:text-4xl font-light text-[#0B1C2D] mb-12">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-[#1D150C] mb-12">
               How It <span className="italic">Works</span>
             </h2>
           </BoxReveal>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#EDEAE3]">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[#DCD6CB]">
             {discipline.format.map((item, i) => (
               <BlurFade key={i} delay={0.15 + i * 0.05} inView>
-                <MagicCard className="bg-white group hover:bg-[#F7F4EF] transition-colors h-full">
+                <MagicCard className="bg-white group hover:bg-[#EDECE8] transition-colors h-full">
                 <div className="p-8 relative z-10">
-                  <div className="font-heading text-4xl text-[#C9A84C]/12 font-light mb-4 leading-none select-none">
+                  <div className="font-heading text-4xl text-[#FA712A]/12 font-light mb-4 leading-none select-none">
                     {String(i + 1).padStart(2, "0")}
                   </div>
-                  <h3 className="font-heading text-lg font-medium text-[#0B1C2D] mb-3 group-hover:text-[#C9A84C] transition-colors">
+                  <h3 className="font-heading text-lg font-medium text-[#1D150C] mb-3 group-hover:text-[#FA712A] transition-colors">
                     {item.heading}
                   </h3>
-                  <p className="text-[#6B7280] text-[13px] leading-relaxed">{item.desc}</p>
+                  <p className="text-[#6E6155] text-[13px] leading-relaxed">{item.desc}</p>
                 </div>
                 </MagicCard>
               </BlurFade>
@@ -277,16 +277,16 @@ export default async function DisciplinePage({
       </section>
 
       {/* How to compete */}
-      <section className="relative bg-[#0B1C2D] py-20 lg:py-28 overflow-hidden">
+      <section className="relative bg-[#1D150C] py-20 lg:py-28 overflow-hidden">
         <AnimatedGridPattern className="opacity-30" numSquares={12} maxOpacity={0.05} />
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start relative z-10">
           <BlurFade delay={0.1} inView>
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-px w-8 bg-[#C9A84C]/50" />
-              <span className="text-[10px] tracking-[0.22em] uppercase text-[#C9A84C]/70 font-medium">Get Started</span>
+              <div className="h-px w-8 bg-[#FA712A]/50" />
+              <span className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A]/70 font-medium">Get Started</span>
             </div>
-            <h2 className="font-heading text-3xl lg:text-4xl font-light text-white leading-snug mb-6">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-light text-white leading-snug mb-6">
               How to Compete in <span className="italic">Karnataka</span>
             </h2>
             <p className="text-white/50 text-sm leading-relaxed">
@@ -297,7 +297,7 @@ export default async function DisciplinePage({
           <AnimatedList className="space-y-5" delay={0.15} stagger={0.08}>
             {discipline.howToCompete.map((step, i) => (
               <li key={i} className="flex gap-5">
-                <span className="font-heading text-2xl text-[#C9A84C]/30 font-light leading-none shrink-0 w-6 mt-0.5">
+                <span className="font-heading text-2xl text-[#FA712A]/30 font-light leading-none shrink-0 w-6 mt-0.5">
                   {i + 1}
                 </span>
                 <p className="text-white/60 text-sm leading-relaxed">{step}</p>
@@ -308,15 +308,15 @@ export default async function DisciplinePage({
       </section>
 
       {/* CTA */}
-      <section className="bg-[#F7F4EF] py-16 border-b border-[#EDEAE3]">
+      <section className="bg-[#EDECE8] py-16 border-b border-[#DCD6CB]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <h3 className="font-heading text-2xl font-light text-[#0B1C2D]">Ready to compete in <span className="italic">{discipline.title}?</span></h3>
-            <p className="text-[#6B7280] text-sm mt-1">Join KEA and register for upcoming {discipline.title} events in Karnataka.</p>
+            <h3 className="font-heading text-2xl font-light text-[#1D150C]">Ready to compete in <span className="italic">{discipline.title}?</span></h3>
+            <p className="text-[#6E6155] text-sm mt-1">Join KEA and register for upcoming {discipline.title} events in Karnataka.</p>
           </div>
           <div className="flex gap-3 shrink-0">
-            <a href="mailto:secretariat@kea.org.in" className="px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors">Join KEA</a>
-            <Link href="/events" className="px-8 py-3.5 border border-[#0B1C2D]/18 text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase hover:border-[#C9A84C] hover:text-[#C9A84C] transition-colors">View Events</Link>
+            <a href="mailto:secretariat@kea.org.in" className="px-8 py-3.5 bg-[#B99A3D] text-[#1D150C] font-heading text-[14px] tracking-[0.06em] uppercase font-semibold hover:bg-[#FA712A] transition-colors">Join KEA</a>
+            <Link href="/events" className="px-8 py-3.5 border border-[#1D150C]/18 text-[#1D150C] font-heading text-[14px] tracking-[0.06em] uppercase hover:border-[#FA712A] hover:text-[#FA712A] transition-colors">View Events</Link>
           </div>
         </div>
       </section>

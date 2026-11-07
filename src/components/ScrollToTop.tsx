@@ -22,10 +22,10 @@ export function ScrollToTop() {
           exit={{ opacity: 0, scale: 0.8, y: 10 }}
           transition={{ duration: 0.25 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="fixed bottom-8 right-8 z-40 w-12 h-12 bg-[#C9A84C] text-[#0B1C2D] flex items-center justify-center shadow-[0_4px_20px_rgba(201,168,76,0.35)] hover:bg-[#b8963e] hover:shadow-[0_6px_28px_rgba(201,168,76,0.45)] transition-all duration-300 group"
+          className="fixed bottom-6 right-6 z-40 w-11 h-11 rounded-full border border-[#EDECE8]/30 bg-[#1D150C]/80 backdrop-blur-md text-[#FA712A] flex items-center justify-center shadow-[0_10px_30px_-8px_rgba(0,0,0,0.55)] hover:border-[#FA712A] hover:bg-[#1D150C] transition-colors duration-300 group"
           aria-label="Scroll to top"
         >
-          <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
+          <ArrowUp className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" strokeWidth={1.6} />
         </motion.button>
       )}
     </AnimatePresence>

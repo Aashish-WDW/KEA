@@ -96,38 +96,38 @@ export default function CommitteesPage() {
       breadcrumbs={[{ label: "Home", href: "/" }, { label: "Office Bearers", href: "/office-bearers" }, { label: "Committees" }]}
     >
       {/* Intro */}
-      <section className="bg-[#F7F4EF] py-14 border-b border-[#EDEAE3]">
+      <section className="bg-[#EDECE8] py-14 border-b border-[#DCD6CB]">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-[#4A5568] text-sm leading-relaxed max-w-3xl">
+          <p className="text-[#4E4136] text-sm leading-relaxed max-w-3xl">
             The Executive Committee constitutes standing sub-committees to manage specific domains of Association activity. Each committee is chaired by a member of the Executive Committee and may co-opt additional members with relevant expertise. Committee decisions are subject to ratification by the Executive Committee.
           </p>
         </div>
       </section>
 
       {/* Committees */}
-      <section className="bg-[#F7F4EF] pb-20 lg:pb-28">
+      <section className="bg-[#EDECE8] pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-6 pt-12">
           <div className="space-y-6">
             {committees.map((c, i) => (
-              <div key={c.name} className="bg-white border border-[#EDEAE3] hover:border-[#C9A84C]/30 transition-all duration-200 overflow-hidden group">
+              <div key={c.name} className="bg-white border border-[#DCD6CB] hover:border-[#FA712A]/30 transition-all duration-200 overflow-hidden group">
                 {/* Header */}
-                <div className="flex items-start gap-6 p-8 border-b border-[#EDEAE3]">
-                  <div className="font-heading text-5xl text-[#C9A84C]/12 font-light leading-none select-none shrink-0">{String(i + 1).padStart(2, "0")}</div>
+                <div className="flex items-start gap-6 p-8 border-b border-[#DCD6CB]">
+                  <div className="font-heading text-5xl text-[#FA712A]/12 font-light leading-none select-none shrink-0">{String(i + 1).padStart(2, "0")}</div>
                   <div className="flex-1">
-                    <h3 className="font-heading text-xl font-medium text-[#0B1C2D] mb-2 group-hover:text-[#C9A84C] transition-colors">{c.name}</h3>
-                    <p className="text-[#6B7280] text-[13px] leading-relaxed">{c.purpose}</p>
+                    <h3 className="font-heading text-xl font-medium text-[#1D150C] mb-2 group-hover:text-[#FA712A] transition-colors">{c.name}</h3>
+                    <p className="text-[#6E6155] text-[13px] leading-relaxed">{c.purpose}</p>
                   </div>
                 </div>
 
                 {/* Body */}
                 <div className="grid lg:grid-cols-[1fr_260px] gap-0">
                   {/* Responsibilities */}
-                  <div className="p-8 border-r border-[#EDEAE3]">
-                    <div className="text-[10px] tracking-[0.16em] uppercase text-[#C9A84C] mb-4">Key Responsibilities</div>
+                  <div className="p-8 border-r border-[#DCD6CB]">
+                    <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] mb-4">Key Responsibilities</div>
                     <ul className="space-y-2.5">
                       {c.responsibilities.map((r, j) => (
-                        <li key={j} className="flex items-start gap-2.5 text-[13px] text-[#4A5568]">
-                          <span className="text-[#C9A84C] text-[8px] mt-1 shrink-0">◇</span>
+                        <li key={j} className="flex items-start gap-2.5 text-[13px] text-[#4E4136]">
+                          <span className="text-[#FA712A] text-[8px] mt-1 shrink-0">◇</span>
                           {r}
                         </li>
                       ))}
@@ -135,19 +135,19 @@ export default function CommitteesPage() {
                   </div>
 
                   {/* Chair + Members */}
-                  <div className="p-8 bg-[#F7F4EF]">
-                    <div className="text-[10px] tracking-[0.16em] uppercase text-[#C9A84C] mb-4">Chairperson</div>
+                  <div className="p-8 bg-[#EDECE8]">
+                    <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] mb-4">Chairperson</div>
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="w-10 h-10 rounded-full bg-white border border-[#EDEAE3] flex items-center justify-center shrink-0">
-                        <span className="font-heading text-sm font-medium text-[#0B1C2D]">{c.initials}</span>
+                      <div className="w-10 h-10 rounded-full bg-white border border-[#DCD6CB] flex items-center justify-center shrink-0">
+                        <span className="font-heading text-sm font-medium text-[#1D150C]">{c.initials}</span>
                       </div>
-                      <span className="text-[#0B1C2D] text-sm font-medium">{c.chair}</span>
+                      <span className="text-[#1D150C] text-sm font-medium">{c.chair}</span>
                     </div>
-                    <div className="text-[10px] tracking-[0.16em] uppercase text-[#C9A84C] mb-3">Members</div>
+                    <div className="font-heading text-[14px] tracking-[0.06em] uppercase text-[#FA712A] mb-3">Members</div>
                     <ul className="space-y-1.5">
                       {c.members.map((m) => (
-                        <li key={m} className="text-[12px] text-[#6B7280] flex items-start gap-2">
-                          <span className="text-[#C9A84C]/40 text-[7px] mt-1">◇</span>
+                        <li key={m} className="text-[12px] text-[#6E6155] flex items-start gap-2">
+                          <span className="text-[#FA712A]/40 text-[7px] mt-1">◇</span>
                           {m}
                         </li>
                       ))}
@@ -161,10 +161,10 @@ export default function CommitteesPage() {
       </section>
 
       {/* Note */}
-      <section className="bg-[#0B1C2D] py-14">
+      <section className="bg-[#1D150C] py-14">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <p className="text-white/45 text-sm leading-relaxed max-w-2xl">For queries about a specific committee's work, or to request committee meeting minutes, contact the KEA Secretariat.</p>
-          <Link href="/contact" className="shrink-0 px-8 py-3.5 bg-[#C9A84C] text-[#0B1C2D] text-[10px] tracking-[0.2em] uppercase font-semibold hover:bg-[#b8963e] transition-colors">
+          <Link href="/contact" className="shrink-0 px-8 py-3.5 bg-[#B99A3D] text-[#1D150C] font-heading text-[14px] tracking-[0.06em] uppercase font-semibold hover:bg-[#FA712A] transition-colors">
             Contact Secretariat →
           </Link>
         </div>
